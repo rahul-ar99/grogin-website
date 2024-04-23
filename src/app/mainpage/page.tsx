@@ -7,7 +7,7 @@ const Mainpage  = () =>{
     return <div className="w-full">
             <Header />
             <div className="wrapper">
-                <div className="w-full flex bg-red-300">
+                <div className="w-full flex gap-12">
                     <Filter />
                     <MainContent />
                 </div>
