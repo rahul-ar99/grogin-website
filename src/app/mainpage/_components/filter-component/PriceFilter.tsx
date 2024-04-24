@@ -6,15 +6,15 @@ const PriceFilter = () =>{
                 <div className="flex">
                     <div>
                         <p>Min price</p>
-                        <div className="border rounded-xl py-2 px-3 w-[150px]">
-                            <input type="text" className="w-full outline-none" value={0} />
+                        <div className="border rounded-xl py-2 px-3 w-[120px]">
+                            <input type="text" className="w-full outline-none" defaultValue={0} />
                         </div>
                     </div>
                     <p className="flex items-end mb-3 mx-2">-</p>
                     <div>
                         <p>Min price</p>
-                        <div className="border rounded-xl py-2 px-3 w-[150px]">
-                            <input type="text" className="w-full outline-none" value={30} />
+                        <div className="border rounded-xl py-2 px-3 w-[120px]">
+                            <input type="text" className="w-full outline-none" defaultValue={30} />
                         </div>
                     </div>
                 </div>

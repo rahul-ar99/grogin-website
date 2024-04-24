@@ -8,7 +8,7 @@ const BannerSection = () =>{
                     <div className="rounded-xl overflow-hidden">
                         <Image src={banner} alt="banner"/>
                     </div>
-                    <div className="absolute top-0 left-10">
+                    <div className="absolute top-10 left-10">
                         <div>
                             <span className="text-xs bg-[#FFEDD5] p-1 rounded-xl">Only This Week</span>
                             <h3 className="text-3xl mt-5 mb-2">Grocery store with different <br /> treasures</h3>

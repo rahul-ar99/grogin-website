@@ -1,18 +1,27 @@
 import Image from "next/image"
 
 const ProductsList = () => {
-    return <div className="flex flex-wrap">
-                <div className="w-[20%] h-[420px] border">
-                    <div>
+
+    const list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+
+
+    return <>
+            <div className="flex flex-wrap">
+                {list.map((value,index)=>{
+                    return<div className="w-[20%] h-[420px] border" key={index}>
+                    <div className="bg-red-400 relative">
                         <div>   
                             <Image src={require('../../../../../public/assets/images/product_1.jpg')} alt="product" />
                         </div>
                         <div>
+                            <div className="absolute top-3 right-3">
+                                <i className="fa fa-heart text-red-600" style={{fontSize:'24px'}}></i>
+                            </div>
 
                         </div>
                     </div>
                     <div className="pl-2">
-                        <h6 className="mb-3">Yellow Potatoes Whole Fresh, 5lb Bag</h6>
+                        <h6 className="mb-3">Yellow Potatoes Whole Fresh, 5l`b Bag</h6>
                         <div className="flex gap-2">
                             <div className="flex gap-1">
                                 <i className="fa fa-star"></i>
@@ -35,34 +44,10 @@ const ProductsList = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-[20%] h-[400px] border">
-                    <p>asdf</p>
-                </div>
-                <div className="w-[20%] h-[400px] border">
-                    <p>asdf</p>
-                </div>
-                <div className="w-[20%] h-[400px] border">
-                    <p>asdf</p>
-                </div>
-                <div className="w-[20%] h-[400px] border">
-                    <p>asdf</p>
-                </div>
-                <div className="w-[20%] h-[400px] border">
-                    <p>asdf</p>
-                </div>
-                <div className="w-[20%] h-[400px] border">
-                    <p>asdf</p>
-                </div>
-                <div className="w-[20%] h-[400px] border">
-                    <p>asdf</p>
-                </div>
-                <div className="w-[20%] h-[400px] border">
-                    <p>asdf</p>
-                </div>
-                <div className="w-[20%] h-[400px] border">
-                    <p>asdf</p>
-                </div>
+                })}
+                
             </div>
+    </>
 }
 
 export default ProductsList

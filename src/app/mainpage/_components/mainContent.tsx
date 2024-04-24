@@ -2,6 +2,7 @@ import SelectedFilter from "./mainContent-component/SelectedFilter"
 import BannerSection from "./mainContent-component/BannerSection"
 import SortSection from "./mainContent-component/SortSection"
 import ProductsList from "./mainContent-component/ProductsList"
+import DetailPage from "@/app/detailpage/page"
 
 
 const MainContent = () =>{
@@ -12,8 +13,8 @@ const MainContent = () =>{
         <BannerSection />
         {/* sort section */}
         <SortSection />
-        <ProductsList />
-        <p>Main content</p>
+        <DetailPage />
+        {/* <ProductsList /> */}
     </div>
 }
 

@@ -34,7 +34,7 @@ const CatogaryFilter = () =>{
                     </div>
                     <div className="flex gap-3">
                         <input type="checkbox" className="bg-red-500" id="Frozen" />
-                        <label htmlFor="fruFrozenits">Frozen Foods</label>
+                        <label htmlFor="Frozen">Frozen Foods</label>
                     </div>
                     <div className="flex gap-3">
                         <input type="checkbox" className="bg-red-500" id="Grocery" />

@@ -1,13 +1,13 @@
 import Header from "@/components/includes/header/header"
 import Footer from "@/components/includes/footer/footer"
-import Filter from "./components/filter"
-import MainContent from "./components/mainContent"
+import Filter from "./_components/filter"
+import MainContent from "./_components/mainContent"
 
 const Mainpage  = () =>{
     return <div className="w-full">
             <Header />
             <div className="wrapper">
-                <div className="w-full flex gap-12">
+                <div className="w-full flex gap-12 pb-16">
                     <Filter />
                     <MainContent />
                 </div>
