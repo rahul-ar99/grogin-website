@@ -21,6 +21,7 @@ const PriceFilter = () =>{
                 <div>
                     <input type="range" className="w-full" />
                 </div>
+                
                 <div className="flex justify-between items-center">
                     <p>Price: $0 - $30</p>
                     <button className="py-2 px-3 bg-[#E5E7EB] rounded-md">Filter</button>
