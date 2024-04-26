@@ -8,7 +8,7 @@ const Related = () =>{
                 <div className="flex flex-wrap">
                     {list.map((value,index)=>{
                             return <div className="w-[20%] border" key={index}>
-                            <Link href={`detailpage/${index+1}`}>
+                            <Link href={`/detailpage/${index+1}`}>
                                     <div className="bg-red-400 relative">
                                         <div>   
                                             <Image src={require('../../../../../public/assets/images/product_1.jpg')} alt="product" />

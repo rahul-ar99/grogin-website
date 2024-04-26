@@ -14,7 +14,6 @@ const ProductDetailPage = ({params}:{params:{productId:string}}) =>{
                     <Description />
                     <Related />
                 </div>
-
                 <Footer />
             </div>
 }
