@@ -41,7 +41,7 @@ body {
   -webkit-appearance: none;
   background: none;
   z-index: 10;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 input[type='number']::-webkit-inner-spin-button,

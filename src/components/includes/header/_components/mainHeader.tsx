@@ -1,7 +1,15 @@
+'use client'
+
 import Image from "next/image"
 import logo from '../../../../../public/assets/images/logo.png'
+import { useSelector } from "react-redux"
+import { RootState } from "@/app/redux/store/page"
+import Link from "next/link"
 
 const MainHeader = () =>{
+
+    const fav = useSelector((state:RootState)=>state.favorite.value)
+
     return <div className="w-full border-b border-b-gray-500">
         <div className="wrapper">
             <div className="flex justify-between max-w-full py-7">
@@ -37,10 +45,11 @@ const MainHeader = () =>{
                         </a>
                     </div>
                     <div>
-                        <a href=""  className="flex flex-col items-center">
+                        <Link href="/wishlist"  className="flex flex-col items-center  relative">
                             <i className="fa fa-heart-o" style={{fontSize: '24px'}}></i>
                             <p>Wishlist</p>
-                        </a>
+                            <p className="flex bg-red-500 text-white w-5 items-center justify-center rounded-full absolute right-1 top-[-10px] text-base">{fav.length}</p>
+                        </Link>
                     </div>
                     <div>
                         <a href=""  className="flex flex-col items-center">

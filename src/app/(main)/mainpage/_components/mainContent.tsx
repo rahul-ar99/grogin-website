@@ -2,10 +2,12 @@ import SelectedFilter from "./mainContent-component/SelectedFilter"
 import BannerSection from "./mainContent-component/BannerSection"
 import SortSection from "./mainContent-component/SortSection"
 import ProductsList from "./mainContent-component/ProductsList"
-import DetailPage from "@/app/detailpage/page"
+import DetailPage from "../../detailpage/page"
+
 
 
 const MainContent = () =>{
+
     return <div className="w-[inherit]">
         {/* filter selected */}
         <SelectedFilter />

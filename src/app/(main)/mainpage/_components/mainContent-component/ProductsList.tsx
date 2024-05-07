@@ -1,4 +1,6 @@
 import Image from "next/image"
+import { Provider } from "react-redux"
+import { Store } from "@/app/redux/store/page"
 
 const ProductsList = () => {
 
@@ -6,6 +8,8 @@ const ProductsList = () => {
 
 
     return <>
+        <Provider store={Store}>
+
             <div className="flex flex-wrap">
                 {list.map((value,index)=>{
                     return<div className="w-[20%] h-[420px] border" key={index}>
@@ -47,6 +51,7 @@ const ProductsList = () => {
                 })}
                 
             </div>
+                        </Provider>
     </>
 }
 

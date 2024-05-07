@@ -1,5 +1,5 @@
 import Image from "next/image"
-import banner from '../../../../../public/assets/images/banner.jpg'
+import banner from '../../../../../../public/assets/images/banner.jpg'
 
 
 const BannerSection = () =>{

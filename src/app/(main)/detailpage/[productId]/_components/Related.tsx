@@ -11,7 +11,7 @@ const Related = () =>{
                             <Link href={`/detailpage/${index+1}`}>
                                     <div className="bg-red-400 relative">
                                         <div>   
-                                            <Image src={require('../../../../../public/assets/images/product_1.jpg')} alt="product" />
+                                            <Image src={require('../../../../../../public/assets/images/product_1.jpg')} alt="product" />
                                         </div>
                                         <div>
                                             <div className="absolute top-3 right-3">

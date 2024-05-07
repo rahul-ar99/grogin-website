@@ -1,0 +1,1463 @@
+[
+        {
+            "product_id": 1,
+            "product_code": "Y3L7W2P9",
+            "product_name": "Yellow Potatoes",
+            "rating": 3,
+            "no_of_person_reviewed": 18,
+            "original_price": 2.79,
+            "discount": 20,
+            "product_status": true,
+            "in_stock": true,
+            "isOrganic": true,
+            "uploaded_date": "2024-05-02T09:45:00Z",
+            "category": "fruits",
+            "color": "yellow",
+            "brand": "organic farms",
+            "short_desc": "Versatile and nutritious yellow potatoes.",
+            "long_desc": "Our organic yellow potatoes are perfect for roasting, mashing, or frying. Packed with vitamins and minerals, they make a delicious and healthy addition to any meal.",
+            "reviews": [
+              {
+                "image": "path_to_image",
+                "name": "Noah Taylor",
+                "review": "Great taste and texture!"
+              },
+              {
+                "image": "path_to_image",
+                "name": "Emma Garcia",
+                "review": "Love the color and flavor."
+              },
+              {
+                "image": "path_to_image",
+                "name": "William Martinez",
+                "review": "Fresh and delicious potatoes."
+              }
+            ],
+            "images": {
+              "main_image": "path_to_main_image",
+              "sub_images": {
+                "image1": "path_to_image1",
+                "image2": "path_to_image2",
+                "image3": "path_to_image3"
+              }
+            }
+          },          
+        {
+            "product_id": 2,
+            "product_code": "L4G3B6D7O",
+            "product_name": "Large Bagged Oranges",
+            "rating": 2,
+            "no_of_person_reviewed": 30,
+            "original_price": 5.99,
+            "discount": 10,
+            "product_status": true,
+            "in_stock": true,
+            "isOrganic": false,
+            "uploaded_date": "2024-05-03T10:30:00Z",
+            "category": "fruits",
+            "color": "orange",
+            "brand": "any",
+            "short_desc": "Sweet and juicy large oranges, conveniently bagged.",
+            "long_desc": "Enjoy the refreshing taste of large oranges, perfect for snacking or juicing. Each orange is handpicked for optimal ripeness and flavor.",
+            "reviews": [
+              {
+                "image": "path_to_image",
+                "name": "Sophia Miller",
+                "review": "Great quality oranges!"
+              },
+              {
+                "image": "path_to_image",
+                "name": "Ethan Johnson",
+                "review": "Delicious and juicy."
+              },
+              {
+                "image": "path_to_image",
+                "name": "Ava Wilson",
+                "review": "Best oranges I've had."
+              }
+            ],
+            "images": {
+              "main_image": "path_to_main_image",
+              "sub_images": {
+                "image1": "path_to_image1",
+                "image2": "path_to_image2",
+                "image3": "path_to_image3"
+              }
+            }
+          },          
+        {
+        "product_id": 3,
+        "product_code": "S7T4R1W3",
+        "product_name": "Strawberries",
+        "rating": 4,
+        "no_of_person_reviewed": 25,
+        "original_price": 3.99,
+        "discount": 15,
+        "product_status": true,
+        "in_stock": true,
+        "isOrganic": true,
+        "uploaded_date": "2024-05-01T11:00:00Z",
+        "category": "fruits",
+        "color": "red",
+        "brand": "premium farms",
+        "short_desc": "Experience the luscious sweetness of our premium strawberries, handpicked at peak ripeness for exceptional flavor and freshness.",
+        "long_desc": "At our premium farms, we dedicate ourselves to cultivating the finest strawberries, ensuring each berry is bursting with natural sweetness and juiciness. From field to table, our strawberries undergo meticulous care and attention to detail. They are perfect for snacking straight out of the box, enhancing your favorite desserts, or adding a vibrant touch to salads and smoothies. Packed with antioxidants, vitamins, and fiber, our strawberries not only tantalize your taste buds but also nourish your body. Elevate your culinary creations and savor the taste of freshness with every bite of our premium strawberries.",
+        "reviews": [
+          {
+            "image": "path_to_image",
+            "name": "Olivia Clark",
+            "review": "Absolutely delicious!"
+          },
+          {
+            "image": "path_to_image",
+            "name": "Ethan Lee",
+            "review": "Best strawberries ever tasted."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Ava White",
+            "review": "Fresh and flavorful."
+          }
+        ],
+        "images": {
+          "main_image": "path_to_main_image",
+          "sub_images": {
+            "image1": "path_to_image1",
+            "image2": "path_to_image2",
+            "image3": "path_to_image3"
+          }
+        }
+      },
+      
+      {
+        "product_id": 4,
+        "product_code": "S5L1C3D3S",
+        "product_name": "Sliced Strawberries",
+        "rating": 4,
+        "no_of_person_reviewed": 20,
+        "original_price": 4.49,
+        "discount": 10,
+        "product_status": true,
+        "in_stock": true,
+        "isOrganic": true,
+        "uploaded_date": "2024-05-04T09:30:00Z",
+        "category": "fruits",
+        "color": "red",
+        "brand": "premium farms",
+        "short_desc": "Conveniently sliced premium strawberries, ready to enjoy in salads, desserts, or as a topping.",
+        "long_desc": "Our premium sliced strawberries offer the same exceptional flavor and freshness as our whole berries but with added convenience. Perfectly sliced and ready to use, these strawberries are ideal for adding a burst of flavor and color to your favorite dishes. Whether sprinkled over yogurt, tossed in salads, or layered in cakes, our sliced strawberries elevate every bite with their natural sweetness and juiciness. Packed with antioxidants and vitamins, they are a delicious and nutritious addition to any meal.",
+        "reviews": [
+          {
+            "image": "path_to_image",
+            "name": "Emma Wilson",
+            "review": "Love the convenience!"
+          },
+          {
+            "image": "path_to_image",
+            "name": "Daniel Smith",
+            "review": "Great taste and texture."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Sophia Garcia",
+            "review": "Fresh and delicious slices."
+          }
+        ],
+        "images": {
+          "main_image": "path_to_main_image",
+          "sub_images": {
+            "image1": "path_to_image1",
+            "image2": "path_to_image2",
+            "image3": "path_to_image3"
+          }
+        }
+      },
+      {
+        "product_id": 5,
+        "product_code": "P3E5A8C9H",
+        "product_name": "Peach",
+        "rating": 4,
+        "no_of_person_reviewed": 15,
+        "original_price": 2.49,
+        "discount": 10,
+        "product_status": true,
+        "in_stock": true,
+        "isOrganic": true,
+        "uploaded_date": "2024-05-05T08:00:00Z",
+        "category": "fruits",
+        "color": "orange",
+        "brand": "local farm",
+        "short_desc": "Juicy and flavorful peaches, handpicked from local farms for maximum freshness.",
+        "long_desc": "Indulge in the juicy sweetness of our locally grown peaches, handpicked at the peak of ripeness for optimal flavor and freshness. Each peach is bursting with natural goodness and is perfect for snacking, baking, or adding a fruity twist to your favorite dishes. Grown using sustainable farming practices, our peaches are not only delicious but also environmentally friendly. Treat yourself to the taste of summer with our premium peaches.",
+        "reviews": [
+          {
+            "image": "path_to_image",
+            "name": "Grace Miller",
+            "review": "Absolutely delicious!"
+          },
+          {
+            "image": "path_to_image",
+            "name": "David Wilson",
+            "review": "Fresh and juicy peaches."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Sophia Thompson",
+            "review": "Best peaches I've ever had."
+          }
+        ],
+        "images": {
+          "main_image": "path_to_main_image",
+          "sub_images": {
+            "image1": "path_to_image1",
+            "image2": "path_to_image2",
+            "image3": "path_to_image3"
+          }
+        }
+      },
+      {
+        "product_id": 6,
+        "product_code": "B4A2N1A5N",
+        "product_name": "Banana",
+        "rating": 3,
+        "no_of_person_reviewed": 12,
+        "original_price": 1.99,
+        "discount": 50,
+        "product_status": true,
+        "in_stock": true,
+        "isOrganic": false,
+        "uploaded_date": "2024-05-06T09:00:00Z",
+        "category": "fruits",
+        "color": "yellow",
+        "brand": "any",
+        "short_desc": "Sweet and nutritious bananas, perfect for a quick energy boost or as a healthy snack.",
+        "long_desc": "Our bananas are sourced from trusted growers to ensure quality and freshness. Packed with essential vitamins and minerals, they are an excellent source of natural energy. Whether eaten on their own, sliced into cereal, or blended into smoothies, our bananas are a versatile and delicious addition to your diet.",
+        "reviews": [
+          {
+            "image": "path_to_image",
+            "name": "John Doe",
+            "review": "Great taste and quality!"
+          },
+          {
+            "image": "path_to_image",
+            "name": "Jane Smith",
+            "review": "Good value for money."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Alex Johnson",
+            "review": "Fresh and ripe bananas."
+          }
+        ],
+        "images": {
+          "main_image": "path_to_main_image",
+          "sub_images": {
+            "image1": "path_to_image1",
+            "image2": "path_to_image2",
+            "image3": "path_to_image3"
+          }
+        }
+      },
+      {
+        "product_id": 7,
+        "product_code": "S7P9I5N4A1C1H",
+        "product_name": "Spinach & Tortillas",
+        "rating": 4,
+        "no_of_person_reviewed": 30,
+        "original_price": 3.99,
+        "discount": 20,
+        "product_status": true,
+        "in_stock": true,
+        "isOrganic": true,
+        "uploaded_date": "2024-05-07T10:30:00Z",
+        "category": "fruits",
+        "color": "green",
+        "brand": "organic choice",
+        "short_desc": "Fresh spinach leaves and soft tortillas, perfect for making healthy wraps or quesadillas.",
+        "long_desc": "Our spinach and tortillas combo is a versatile and convenient option for quick and nutritious meals. The fresh spinach leaves are packed with vitamins and minerals, while the soft tortillas provide the perfect base for creating delicious wraps or quesadillas. Whether you're in the mood for a light lunch or a hearty dinner, our spinach and tortillas combo is sure to satisfy your cravings.",
+        "reviews": [
+          {
+            "image": "path_to_image",
+            "name": "Michael Brown",
+            "review": "Great combination for a healthy meal!"
+          },
+          {
+            "image": "path_to_image",
+            "name": "Emily Davis",
+            "review": "Convenient and delicious."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Daniel Johnson",
+            "review": "Love the freshness of the spinach."
+          }
+        ],
+        "images": {
+          "main_image": "path_to_main_image",
+          "sub_images": {
+            "image1": "path_to_image1",
+            "image2": "path_to_image2",
+            "image3": "path_to_image3"
+          }
+        }
+      },
+      {
+        "product_id": 8,
+        "product_code": "A2P1P4L5E1S",
+        "product_name": "Apple Soft Caramels",
+        "rating": 4,
+        "no_of_person_reviewed": 40,
+        "original_price": 6.99,
+        "discount": 25,
+        "product_status": true,
+        "in_stock": true,
+        "isOrganic": false,
+        "uploaded_date": "2024-05-08T11:00:00Z",
+        "category": "fruits",
+        "color": "red",
+        "brand": "sweet treats",
+        "short_desc": "Indulge in the rich and creamy taste of our apple-flavored soft caramels, a delightful treat for any occasion.",
+        "long_desc": "Our apple soft caramels are handcrafted using the finest ingredients to ensure a decadent and satisfying taste experience. Each caramel is infused with the sweet and tangy flavor of real apples, creating a perfect balance of fruity sweetness and creamy richness. Whether enjoyed on their own or paired with your favorite hot beverage, our apple soft caramels are sure to delight your taste buds and lift your spirits. Treat yourself or someone special to this irresistible indulgence.",
+        "reviews": [
+          {
+            "image": "path_to_image",
+            "name": "Sophia Wilson",
+            "review": "Absolutely delicious!"
+          },
+          {
+            "image": "path_to_image",
+            "name": "William Johnson",
+            "review": "Perfect blend of flavors."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Ella Martinez",
+            "review": "Creamy and indulgent."
+          }
+        ],
+        "images": {
+          "main_image": "path_to_main_image",
+          "sub_images": {
+            "image1": "path_to_image1",
+            "image2": "path_to_image2",
+            "image3": "path_to_image3"
+          }
+        }
+      },
+      {
+        "product_id": 9,
+        "product_code": "P5U7R2P4L5E",
+        "product_name": "Purple Eggplant",
+        "rating": 4,
+        "no_of_person_reviewed": 18,
+        "original_price": 3.49,
+        "discount": 15,
+        "product_status": true,
+        "in_stock": true,
+        "isOrganic": true,
+        "uploaded_date": "2024-05-09T12:00:00Z",
+        "category": "fruits",
+        "color": "purple",
+        "brand": "organic farms",
+        "short_desc": "Fresh and flavorful purple eggplant, perfect for grilling, roasting, or sautéing.",
+        "long_desc": "Our purple eggplant is known for its vibrant color and delicious taste. Grown organically on our farms, each eggplant is carefully selected for its firm texture and rich flavor. Whether you grill it, roast it, or sauté it, our purple eggplant adds a unique and satisfying element to any dish. Packed with vitamins, minerals, and antioxidants, it's not only delicious but also nutritious. Elevate your culinary creations with our premium purple eggplant.",
+        "reviews": [
+          {
+            "image": "path_to_image",
+            "name": "Oliver Taylor",
+            "review": "Great quality and taste!"
+          },
+          {
+            "image": "path_to_image",
+            "name": "Sophie Clark",
+            "review": "Fresh and delicious."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Nathan Thompson",
+            "review": "Perfect for grilling."
+          }
+        ],
+        "images": {
+          "main_image": "path_to_main_image",
+          "sub_images": {
+            "image1": "path_to_image1",
+            "image2": "path_to_image2",
+            "image3": "path_to_image3"
+          }
+        }
+      },
+      {
+        "product_id": 10,
+        "product_code": "P5O2M1E9G7R",
+        "product_name": "Pomegranate",
+        "rating": 5,
+        "no_of_person_reviewed": 25,
+        "original_price": 4.99,
+        "discount": 10,
+        "product_status": true,
+        "in_stock": true,
+        "isOrganic": true,
+        "uploaded_date": "2024-05-10T13:30:00Z",
+        "category": "fruits",
+        "color": "red",
+        "brand": "premium orchards",
+        "short_desc": "Juicy and nutrient-rich pomegranates, bursting with antioxidants and flavor.",
+        "long_desc": "Our premium pomegranates are prized for their juicy arils and sweet-tart flavor. Each pomegranate is carefully harvested at peak ripeness to ensure maximum freshness and flavor. Packed with antioxidants, vitamins, and minerals, they offer a delicious and nutritious way to boost your health. Whether eaten on their own, sprinkled on salads, or blended into smoothies, our pomegranates are a versatile and tasty addition to your diet. Enjoy the vibrant taste and nutritional benefits of our premium pomegranates today!",
+        "reviews": [
+          {
+            "image": "path_to_image",
+            "name": "Emma Brown",
+            "review": "Absolutely delicious!"
+          },
+          {
+            "image": "path_to_image",
+            "name": "Liam Martinez",
+            "review": "Fresh and juicy arils."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Ava Wilson",
+            "review": "Perfectly ripe pomegranates."
+          }
+        ],
+        "images": {
+            "main_image": "path_to_main_image",
+            "sub_images": {
+              "image1": "path_to_image1",
+              "image2": "path_to_image2",
+              "image3": "path_to_image3"
+            }
+        }
+      },{
+        "product_id": 11,
+        "product_code": "L3E9M2O3N",
+        "product_name": "Lemon",
+        "rating": 4,
+        "no_of_person_reviewed": 22,
+        "original_price": 0.99,
+        "discount": 5,
+        "product_status": true,
+        "in_stock": true,
+        "isOrganic": true,
+        "uploaded_date": "2024-05-11T14:00:00Z",
+        "category": "fruits",
+        "color": "yellow",
+        "brand": "citrus farms",
+        "short_desc": "Zesty and refreshing lemons, perfect for adding tangy flavor to beverages, dishes, and desserts.",
+        "long_desc": "Our fresh lemons are bursting with tangy flavor and zesty aroma, making them a versatile ingredient for both sweet and savory dishes. Sourced from our trusted citrus farms, each lemon is handpicked at peak ripeness to ensure maximum juiciness and freshness. Whether you're squeezing them over seafood, mixing them into cocktails, or using them to brighten up desserts, our lemons add a burst of citrusy goodness to every bite.",
+        "reviews": [
+          {
+            "image": "path_to_image",
+            "name": "Lucas Johnson",
+            "review": "Great quality lemons!"
+          },
+          {
+            "image": "path_to_image",
+            "name": "Sophie Miller",
+            "review": "Fresh and juicy."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Ethan White",
+            "review": "Love the tangy flavor."
+          }
+        ],
+        "images": {
+          "main_image": "path_to_main_image",
+          "sub_images": {
+            "image1": "path_to_image1",
+            "image2": "path_to_image2",
+            "image3": "path_to_image3"
+          }
+        }
+      },
+      {
+        "product_id": 12,
+        "product_code": "C1A9U2L3I4F5L",
+        "product_name": "Cauliflower",
+        "rating": 4,
+        "no_of_person_reviewed": 28,
+        "original_price": 2.79,
+        "discount": 15,
+        "product_status": true,
+        "in_stock": true,
+        "isOrganic": true,
+        "uploaded_date": "2024-05-12T15:30:00Z",
+        "category": "fruits",
+        "color": "white",
+        "brand": "organic farms",
+        "short_desc": "Fresh and versatile cauliflower, perfect for roasting, steaming, or mashing.",
+        "long_desc": "Our organic cauliflower is known for its crisp texture and mild flavor, making it a versatile ingredient for a variety of dishes. Whether you're roasting it with spices, steaming it as a healthy side, or mashing it as a low-carb alternative to potatoes, our cauliflower adds a nutritious twist to your favorite recipes. Grown with care on our organic farms, each head of cauliflower is packed with vitamins, minerals, and antioxidants, making it a delicious and healthy addition to your meals.",
+        "reviews": [
+          {
+            "image": "path_to_image",
+            "name": "Olivia Davis",
+            "review": "Great quality cauliflower!"
+          },
+          {
+            "image": "path_to_image",
+            "name": "Jacob Wilson",
+            "review": "Fresh and delicious."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Sophia Thompson",
+            "review": "Love the versatility."
+          }
+        ],
+        "images": {
+          "main_image": "path_to_main_image",
+          "sub_images": {
+            "image1": "path_to_image1",
+            "image2": "path_to_image2",
+            "image3": "path_to_image3"
+          }
+        }
+      },
+      {
+        "product_id": 13,
+        "product_code": "B8R9O2C6C7O1L",
+        "product_name": "Broccoli Crowns",
+        "rating": 4,
+        "no_of_person_reviewed": 25,
+        "original_price": 3.49,
+        "discount": 10,
+        "product_status": true,
+        "in_stock": true,
+        "isOrganic": true,
+        "uploaded_date": "2024-05-13T16:00:00Z",
+        "category": "fruits",
+        "color": "green",
+        "brand": "organic farms",
+        "short_desc": "Fresh and nutritious broccoli crowns, perfect for steaming, roasting, or stir-frying.",
+        "long_desc": "Our broccoli crowns are harvested at peak freshness to ensure tender texture and vibrant color. Packed with vitamins, minerals, and antioxidants, they are a nutritious addition to any meal. Whether you're steaming them as a side dish, roasting them with garlic and olive oil, or stir-frying them with your favorite vegetables, our broccoli crowns add delicious flavor and healthy goodness to your plate.",
+        "reviews": [
+          {
+            "image": "path_to_image",
+            "name": "Ethan Clark",
+            "review": "Great taste and quality!"
+          },
+          {
+            "image": "path_to_image",
+            "name": "Sophia Garcia",
+            "review": "Fresh and delicious."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Jack Wilson",
+            "review": "Perfectly crisp crowns."
+          }
+        ],
+        "images": {
+          "main_image": "path_to_main_image",
+          "sub_images": {
+            "image1": "path_to_image1",
+            "image2": "path_to_image2",
+            "image3": "path_to_image3"
+          }
+        }
+      },
+      {
+        "product_id": 14,
+        "product_code": "B3L4A6C1K8B9E2R",
+        "product_name": "Blackberries",
+        "rating": 4,
+        "no_of_person_reviewed": 35,
+        "original_price": 5.99,
+        "discount": 20,
+        "product_status": true,
+        "in_stock": true,
+        "isOrganic": true,
+        "uploaded_date": "2024-05-14T17:30:00Z",
+        "category": "fruits",
+        "color": "black",
+        "brand": "premium farms",
+        "short_desc": "Juicy and flavorful blackberries, perfect for snacking, baking, or adding to yogurt.",
+        "long_desc": "Our premium blackberries are handpicked at peak ripeness to ensure maximum flavor and juiciness. Whether enjoyed on their own, baked into pies and cobblers, or mixed into yogurt and smoothies, our blackberries add a burst of sweetness to every bite. Packed with antioxidants, vitamins, and fiber, they are not only delicious but also nutritious. Treat yourself to the taste of summer with our premium blackberries.",
+        "reviews": [
+          {
+            "image": "path_to_image",
+            "name": "Sophia Brown",
+            "review": "Absolutely delicious!"
+          },
+          {
+            "image": "path_to_image",
+            "name": "Liam Johnson",
+            "review": "Fresh and juicy blackberries."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Ava Wilson",
+            "review": "Perfectly ripe and sweet."
+          }
+        ],
+        "images": {
+          "main_image": "path_to_main_image",
+          "sub_images": {
+            "image1": "path_to_image1",
+            "image2": "path_to_image2",
+            "image3": "path_to_image3"
+          }
+        }
+      },
+      {
+        "product_id": 15,
+        "product_code": "P7R6O5T4E2I1N",
+        "product_name": "Protein Shake – Salted Caramel",
+        "rating": 4,
+        "no_of_person_reviewed": 50,
+        "original_price": 3.99,
+        "discount": 15,
+        "product_status": true,
+        "in_stock": true,
+        "isOrganic": false,
+        "uploaded_date": "2024-05-16T09:30:00Z",
+        "category": "fruits",
+        "color": "caramel",
+        "brand": "fitness fuel",
+        "short_desc": "Indulge in the creamy goodness of our Salted Caramel Protein Shake, packed with protein and irresistible flavor.",
+        "long_desc": "Our Salted Caramel Protein Shake is the perfect blend of rich caramel flavor and creamy goodness, with a hint of saltiness for a truly indulgent experience. Packed with high-quality protein, vitamins, and minerals, it's a convenient and delicious way to fuel your body before or after a workout. Whether you're on the go or need a quick post-workout boost, our protein shake is sure to satisfy your cravings while supporting your fitness goals.",
+        "reviews": [
+          {
+            "image": "path_to_image",
+            "name": "Michael Smith",
+            "review": "Love the taste and convenience!"
+          },
+          {
+            "image": "path_to_image",
+            "name": "Sophia Johnson",
+            "review": "Creamy and delicious."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Ethan Wilson",
+            "review": "Great source of protein."
+          }
+        ],
+        "images": {
+          "main_image": "path_to_main_image",
+          "sub_images": {
+            "image1": "path_to_image1",
+            "image2": "path_to_image2",
+            "image3": "path_to_image3"
+          }
+        }
+      },      
+      {
+        "product_id": 16,
+        "product_code": "G5R1E2E8N3A2P4P1L5E",
+        "product_name": "Green Apple",
+        "rating": 4,
+        "no_of_person_reviewed": 40,
+        "original_price": 2.29,
+        "discount": 10,
+        "product_status": true,
+        "in_stock": false,
+        "isOrganic": true,
+        "uploaded_date": "2024-05-15T18:00:00Z",
+        "category": "fruits",
+        "color": "green",
+        "brand": "premium orchards",
+        "short_desc": "Crisp and tangy green apples, perfect for snacking, baking, or adding to salads.",
+        "long_desc": "Our premium green apples are known for their crisp texture and tangy flavor. Whether enjoyed on their own, sliced into salads, or baked into pies and tarts, our green apples add a refreshing twist to your favorite dishes. Grown with care on our orchards, each apple is handpicked at peak ripeness to ensure maximum flavor and freshness. Packed with vitamins, minerals, and fiber, they are a delicious and nutritious snack for any time of day.",
+        "reviews": [
+          {
+            "image": "path_to_image",
+            "name": "Emma Garcia",
+            "review": "Absolutely delicious!"
+          },
+          {
+            "image": "path_to_image",
+            "name": "William Wilson",
+            "review": "Fresh and crisp apples."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Sophia Brown",
+            "review": "Love the tangy flavor."
+          }
+        ],
+        "images": {
+          "main_image": "path_to_main_image",
+          "sub_images": {
+            "image1": "path_to_image1",
+            "image2": "path_to_image2",
+            "image3": "path_to_image3"
+          }
+        }
+      },
+      {
+        "product_id": 17,
+        "product_code": "BAPRE17",
+        "product_name": "Baby Monitor",
+        "rating": 4.8,
+        "no_of_person_reviewed": 25,
+        "original_price": 79.99,
+        "discount": 10,
+        "product_status": true,
+        "in_stock": true,
+        "isOrganic": false,
+        "uploaded_date": "2024-05-03T14:20:00Z",
+        "category": "baby",
+        "color": "white",
+        "brand": "ParentGuard",
+        "short_desc": "Keep an eye on your baby from anywhere in the house.",
+        "long_desc": "Our ParentGuard baby monitor lets you keep an eye on your baby from anywhere in the house. With crystal-clear audio and video, you can rest assured knowing your baby is safe and sound.",
+        "reviews": [
+          {
+            "image": "path_to_image",
+            "name": "Liam Anderson",
+            "review": "Great range and clarity."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Sophia Garcia",
+            "review": "Easy to set up and use."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Mia Wilson",
+            "review": "Helps me sleep better at night."
+          }
+        ],
+          "images": {
+            "main_image": "path_to_main_image",
+            "sub_images": {
+              "image1": "path_to_image1",
+              "image2": "path_to_image2",
+              "image3": "path_to_image3"
+            }
+          }
+        },
+        {
+          "product_id": 18,
+          "product_code": "BAPRE18",
+          "product_name": "Prenatal Vitamins",
+          "rating": 4.5,
+          "no_of_person_reviewed": 30,
+          "original_price": 14.99,
+          "discount": 0,
+          "product_status": true,
+          "in_stock": true,
+          "isOrganic": true,
+          "uploaded_date": "2024-05-04T11:45:00Z",
+          "category": "baby",
+          "color": "orange",
+          "brand": "Mother's Choice",
+          "short_desc": "Essential vitamins for a healthy pregnancy.",
+          "long_desc": "Our Mother's Choice prenatal vitamins are specially formulated to provide essential nutrients for a healthy pregnancy. With a blend of vitamins and minerals, they support your baby's development and help keep you and your baby healthy.",
+          "reviews": [
+            {
+              "image": "path_to_image",
+              "name": "Noah Johnson",
+              "review": "Easy on the stomach, no aftertaste."
+            },
+            {
+              "image": "path_to_image",
+              "name": "Olivia Brown",
+              "review": "I feel more energetic since taking these vitamins."
+            },
+            {
+              "image": "path_to_image",
+              "name": "Ethan Smith",
+              "review": "My doctor recommended these, and I'm glad I listened."
+            }
+          ],
+          "images": {
+            "main_image": "path_to_main_image",
+            "sub_images": {
+              "image1": "path_to_image1",
+              "image2": "path_to_image2",
+              "image3": "path_to_image3"
+            }
+          }
+        },
+          {
+            "product_id": 19,
+            "product_code": "BAPRE19",
+            "product_name": "Baby Diapers",
+            "rating": 4.3,
+            "no_of_person_reviewed": 35,
+            "original_price": 29.99,
+            "discount": 5,
+            "product_status": true,
+            "in_stock": true,
+            "isOrganic": false,
+            "uploaded_date": "2024-05-05T09:30:00Z",
+            "category": "baby",
+            "color": "white",
+            "brand": "LittleBottoms",
+            "short_desc": "Ultra-absorbent diapers for day and night protection.",
+            "long_desc": "Our LittleBottoms diapers are designed to keep your baby dry and comfortable day and night. With a soft and breathable outer layer and ultra-absorbent core, they provide reliable protection against leaks.",
+            "reviews": [
+              {
+                "image": "path_to_image",
+                "name": "Sophia Rodriguez",
+                "review": "No leaks, even overnight!"
+              },
+              {
+                "image": "path_to_image",
+                "name": "Liam Wilson",
+                "review": "Soft and gentle on my baby's skin."
+              },
+              {
+                "image": "path_to_image",
+                "name": "Emma Thompson",
+                "review": "Great value for money."
+              }
+            ],
+            "images": {
+              "main_image": "path_to_main_image",
+              "sub_images": {
+                "image1": "path_to_image1",
+                "image2": "path_to_image2",
+                "image3": "path_to_image3"
+              }
+            }
+          },
+          {
+            "product_id": 20,
+            "product_code": "BAPRE20",
+            "product_name": "Nursing Pillow",
+            "rating": 4.6,
+            "no_of_person_reviewed": 28,
+            "original_price": 39.99,
+            "discount": 0,
+            "product_status": true,
+            "in_stock": true,
+            "isOrganic": false,
+            "uploaded_date": "2024-05-06T12:15:00Z",
+            "category": "baby",
+            "color": "pink",
+            "brand": "NurtureNest",
+            "short_desc": "Supportive pillow for comfortable breastfeeding.",
+            "long_desc": "Our NurtureNest nursing pillow provides support and comfort for both mom and baby during breastfeeding. With a contoured shape and soft, machine-washable cover, it's perfect for bonding with your little one.",
+            "reviews": [
+              {
+                "image": "path_to_image",
+                "name": "Ava Smith",
+                "review": "Makes breastfeeding much more comfortable."
+              },
+              {
+                "image": "path_to_image",
+                "name": "Noah Wilson",
+                "review": "Helped relieve my back pain during breastfeeding."
+              },
+              {
+                "image": "path_to_image",
+                "name": "Olivia Brown",
+                "review": "Easy to clean and maintain."
+              }
+            ],
+            "images": {
+              "main_image": "path_to_main_image",
+              "sub_images": {
+                "image1": "path_to_image1",
+                "image2": "path_to_image2",
+                "image3": "path_to_image3"
+              }
+            }
+          },
+            {
+              "product_id": 21,
+              "product_code": "BAPRE21",
+              "product_name": "Baby Swaddle Blankets",
+              "rating": 4.7,
+              "no_of_person_reviewed": 20,
+              "original_price": 19.99,
+              "discount": 0,
+              "product_status": true,
+              "in_stock": true,
+              "isOrganic": false,
+              "uploaded_date": "2024-05-07T10:00:00Z",
+              "category": "baby",
+              "color": "blue",
+              "brand": "CuddleCare",
+              "short_desc": "Soft and cozy blankets for swaddling your baby.",
+              "long_desc": "Our CuddleCare swaddle blankets are made from soft, breathable fabric that keeps your baby comfortable and cozy. With adorable designs and generous sizing, they're perfect for swaddling, nursing, and cuddling.",
+              "reviews": [
+                {
+                  "image": "path_to_image",
+                  "name": "Liam Garcia",
+                  "review": "Keeps my baby snug and secure."
+                },
+                {
+                  "image": "path_to_image",
+                  "name": "Sophia Martinez",
+                  "review": "So soft and gentle on my baby's skin."
+                },
+                {
+                  "image": "path_to_image",
+                  "name": "Emma Johnson",
+                  "review": "I love the cute designs!"
+                }
+              ],
+              "images": {
+                "main_image": "path_to_main_image",
+                "sub_images": {
+                  "image1": "path_to_image1",
+                  "image2": "path_to_image2",
+                  "image3": "path_to_image3"
+                }
+              }
+            },
+            {
+              "product_id": 22,
+              "product_code": "BAPRE22",
+              "product_name": "Maternity Dress",
+              "rating": 4.5,
+              "no_of_person_reviewed": 15,
+              "original_price": 49.99,
+              "discount": 20,
+              "product_status": true,
+              "in_stock": true,
+              "isOrganic": false,
+              "uploaded_date": "2024-05-08T11:30:00Z",
+              "category": "baby",
+              "color": "black",
+              "brand": "BumpStyle",
+              "short_desc": "Stylish and comfortable dress for expectant mothers.",
+              "long_desc": "Our BumpStyle maternity dress is designed to keep you looking stylish and feeling comfortable throughout your pregnancy. Made from soft, stretchy fabric, it hugs your curves in all the right places.",
+              "reviews": [
+                {
+                  "image": "path_to_image",
+                  "name": "Ava Johnson",
+                  "review": "I feel beautiful and confident in this dress."
+                },
+                {
+                  "image": "path_to_image",
+                  "name": "Noah Brown",
+                  "review": "Great for both casual and dressy occasions."
+                },
+                {
+                  "image": "path_to_image",
+                  "name": "Olivia Rodriguez",
+                  "review": "The material is so soft and comfortable."
+                }
+              ],
+              "images": {
+                "main_image": "path_to_main_image",
+                "sub_images": {
+                  "image1": "path_to_image1",
+                  "image2": "path_to_image2",
+                  "image3": "path_to_image3"
+                }
+              }
+            },
+              {
+                "product_id": 23,
+                "product_code": "BAPRE23",
+                "product_name": "Baby Teething Toys",
+                "rating": 4.6,
+                "no_of_person_reviewed": 18,
+                "original_price": 12.99,
+                "discount": 0,
+                "product_status": true,
+                "in_stock": true,
+                "isOrganic": false,
+                "uploaded_date": "2024-05-09T09:00:00Z",
+                "category": "baby",
+                "color": "multi-color",
+                "brand": "ChewyBuddies",
+                "short_desc": "Soothe your baby's sore gums with our teething toys.",
+                "long_desc": "Our ChewyBuddies teething toys are specially designed to provide relief to your baby's sore gums during teething. Made from safe and durable materials, they're perfect for soothing your baby's discomfort.",
+                "reviews": [
+                  {
+                    "image": "path_to_image",
+                    "name": "Emma Wilson",
+                    "review": "My baby loves chewing on these!"
+                  },
+                  {
+                    "image": "path_to_image",
+                    "name": "Liam Martinez",
+                    "review": "Helped reduce teething pain."
+                  },
+                  {
+                    "image": "path_to_image",
+                    "name": "Sophia Garcia",
+                    "review": "Easy for little hands to hold."
+                  }
+                ],
+                "images": {
+                  "main_image": "path_to_main_image",
+                  "sub_images": {
+                    "image1": "path_to_image1",
+                    "image2": "path_to_image2",
+                    "image3": "path_to_image3"
+                  }
+                }
+              },
+              {
+                "product_id": 24,
+                "product_code": "BAPRE24",
+                "product_name": "Baby Bath Tub",
+                "rating": 4.7,
+                "no_of_person_reviewed": 22,
+                "original_price": 34.99,
+                "discount": 10,
+                "product_status": true,
+                "in_stock": true,
+                "isOrganic": false,
+                "uploaded_date": "2024-05-10T10:30:00Z",
+                "category": "baby",
+                "color": "white",
+                "brand": "BathTimeBuddy",
+                "short_desc": "Make bath time fun and safe with our baby bath tub.",
+                "long_desc": "Our BathTimeBuddy baby bath tub is designed to make bath time safe and enjoyable for both you and your baby. With a comfortable design and built-in support, it's perfect for infants and toddlers alike.",
+                "reviews": [
+                  {
+                    "image": "path_to_image",
+                    "name": "Noah Rodriguez",
+                    "review": "Love the non-slip surface."
+                  },
+                  {
+                    "image": "path_to_image",
+                    "name": "Ava Garcia",
+                    "review": "Easy to clean and store."
+                  },
+                  {
+                    "image": "path_to_image",
+                    "name": "Ethan Smith",
+                    "review": "Great value for money."
+                  }
+                ],
+                "images": {
+                  "main_image": "path_to_main_image",
+                  "sub_images": {
+                    "image1": "path_to_image1",
+                    "image2": "path_to_image2",
+                    "image3": "path_to_image3"
+                  }
+                }
+              },
+      
+                {
+                  "product_id": 25,
+                  "product_code": "BAPRE25",
+                  "product_name": "Baby Carrier",
+                  "rating": 4.9,
+                  "no_of_person_reviewed": 27,
+                  "original_price": 59.99,
+                  "discount": 15,
+                  "product_status": true,
+                  "in_stock": true,
+                  "isOrganic": false,
+                  "uploaded_date": "2024-05-11T11:15:00Z",
+                  "category": "baby",
+                  "color": "gray",
+                  "brand": "SnugWrap",
+                  "short_desc": "Keep your baby close and comfortable with our baby carrier.",
+                  "long_desc": "Our SnugWrap baby carrier allows you to keep your baby close while keeping your hands free. With adjustable straps and padded shoulder pads, it's comfortable for both you and your baby.",
+                  "reviews": [
+                    {
+                      "image": "path_to_image",
+                      "name": "Olivia Wilson",
+                      "review": "Makes running errands so much easier!"
+                    },
+                    {
+                      "image": "path_to_image",
+                      "name": "Noah Brown",
+                      "review": "My baby falls asleep instantly in this carrier."
+                    },
+                    {
+                      "image": "path_to_image",
+                      "name": "Sophia Rodriguez",
+                      "review": "Great for hiking and outdoor activities."
+                    }
+                  ],
+                  "images": {
+                    "main_image": "path_to_main_image",
+                    "sub_images": {
+                      "image1": "path_to_image1",
+                      "image2": "path_to_image2",
+                      "image3": "path_to_image3"
+                    }
+                  }
+                },
+                {
+                  "product_id": 26,
+                  "product_code": "BAPRE26",
+                  "product_name": "Pregnancy Journal",
+                  "rating": 4.7,
+                  "no_of_person_reviewed": 20,
+                  "original_price": 24.99,
+                  "discount": 0,
+                  "product_status": true,
+                  "in_stock": true,
+                  "isOrganic": false,
+                  "uploaded_date": "2024-05-12T09:45:00Z",
+                  "category": "baby",
+                  "color": "white",
+                  "brand": "MommyMemoirs",
+                  "short_desc": "Capture every moment of your pregnancy with our journal.",
+                  "long_desc": "Our MommyMemoirs pregnancy journal is the perfect way to capture every moment of your pregnancy journey. With prompts, trackers, and space for photos, it's a keepsake you'll cherish forever.",
+                  "reviews": [
+                    {
+                      "image": "path_to_image",
+                      "name": "Liam Smith",
+                      "review": "Helps me stay organized and remember important milestones."
+                    },
+                    {
+                      "image": "path_to_image",
+                      "name": "Ava Garcia",
+                      "review": "Beautifully designed and well-made."
+                    },
+                    {
+                      "image": "path_to_image",
+                      "name": "Noah Johnson",
+                      "review": "I love looking back on my pregnancy memories."
+                    }
+                  ],
+                  "images": {
+                    "main_image": "path_to_main_image",
+                    "sub_images": {
+                      "image1": "path_to_image1",
+                      "image2": "path_to_image2",
+                      "image3": "path_to_image3"
+                    }
+                  }
+                },
+                  {
+                    "product_id": 27,
+                    "product_code": "BAPRE27",
+                    "product_name": "Baby Wipes",
+                    "rating": 4.6,
+                    "no_of_person_reviewed": 25,
+                    "original_price": 8.99,
+                    "discount": 0,
+                    "product_status": true,
+                    "in_stock": true,
+                    "isOrganic": false,
+                    "uploaded_date": "2024-05-13T10:00:00Z",
+                    "category": "baby",
+                    "color": "white",
+                    "brand": "SoftTouch",
+                    "short_desc": "Gentle wipes for cleaning your baby's delicate skin.",
+                    "long_desc": "Our SoftTouch baby wipes are specially formulated to be gentle on your baby's delicate skin. With a hypoallergenic and alcohol-free formula, they're perfect for cleaning up messes on the go.",
+                    "reviews": [
+                      {
+                        "image": "path_to_image",
+                        "name": "Emma Brown",
+                        "review": "Soft and gentle, yet effective."
+                      },
+                      {
+                        "image": "path_to_image",
+                        "name": "Sophia Martinez",
+                        "review": "Great for sensitive skin."
+                      },
+                      {
+                        "image": "path_to_image",
+                        "name": "Noah Johnson",
+                        "review": "Convenient packaging for diaper bag."
+                      }
+                    ],
+                    "images": {
+                      "main_image": "path_to_main_image",
+                      "sub_images": {
+                        "image1": "path_to_image1",
+                        "image2": "path_to_image2",
+                        "image3": "path_to_image3"
+                      }
+                    }
+                  },
+                  {
+                    "product_id": 28,
+                    "product_code": "BAPRE28",
+                    "product_name": "Baby Onesies",
+                    "rating": 4.8,
+                    "no_of_person_reviewed": 30,
+                    "original_price": 15.99,
+                    "discount": 0,
+                    "product_status": true,
+                    "in_stock": true,
+                    "isOrganic": false,
+                    "uploaded_date": "2024-05-14T09:30:00Z",
+                    "category": "baby",
+                    "color": "various",
+                    "brand": "CuteBabies",
+                    "short_desc": "Adorable onesies for your little one.",
+                    "long_desc": "Our CuteBabies onesies are made from soft and breathable fabric that's gentle on your baby's skin. With cute prints and easy snaps, they're perfect for everyday wear.",
+                    "reviews": [
+                      {
+                        "image": "path_to_image",
+                        "name": "Liam Rodriguez",
+                        "review": "Great quality fabric and stitching."
+                      },
+                      {
+                        "image": "path_to_image",
+                        "name": "Ava Wilson",
+                        "review": "Love the variety of colors and designs."
+                      },
+                      {
+                        "image": "path_to_image",
+                        "name": "Noah Garcia",
+                        "review": "They wash well and hold up nicely."
+                      }
+                    ],
+                    "images": {
+                      "main_image": "path_to_main_image",
+                      "sub_images": {
+                        "image1": "path_to_image1",
+                        "image2": "path_to_image2",
+                        "image3": "path_to_image3"
+                      }
+              }},{
+    "product_id": 27,   
+    "product_code": "BAPRE27",
+    "product_name": "Baby Wipes",
+    "rating": 4.6,
+    "no_of_person_reviewed": 25,
+    "original_price": 8.99,
+    "discount": 0,
+    "product_status": true,
+    "in_stock": true,
+    "isOrganic": false,
+    "uploaded_date": "2024-05-13T10:00:00Z",
+    "category": "baby",
+    "color": "white",
+    "brand": "SoftTouch",
+    "short_desc": "Gentle wipes for cleaning your baby's delicate skin.",
+    "long_desc": "Our SoftTouch baby wipes are specially formulated to be gentle on your baby's delicate skin. With a hypoallergenic and alcohol-free formula, they're perfect for cleaning up messes on the go.",
+    "reviews": [
+      {
+        "image": "path_to_image",
+        "name": "Emma Brown",
+        "review": "Soft and gentle, yet effective."
+      },
+      {
+        "image": "path_to_image",
+        "name": "Sophia Martinez",
+        "review": "Great for sensitive skin."
+      },
+      {
+        "image": "path_to_image",
+        "name": "Noah Johnson",
+        "review": "Convenient packaging for diaper bag."
+      }
+    ],
+    "images": {
+      "main_image": "path_to_main_image",
+      "sub_images": {
+        "image1": "path_to_image1",
+        "image2": "path_to_image2",
+        "image3": "path_to_image3"
+      }
+    }
+  },
+  {
+    "product_id": 28,
+    "product_code": "BAPRE28",
+    "product_name": "Baby Onesies",
+    "rating": 4.8,
+    "no_of_person_reviewed": 30,
+    "original_price": 15.99,
+    "discount": 0,
+    "product_status": true,
+    "in_stock": true,
+    "isOrganic": false,
+    "uploaded_date": "2024-05-14T09:30:00Z",
+    "category": "baby",
+    "color": "various",
+    "brand": "CuteBabies",
+    "short_desc": "Adorable onesies for your little one.",
+    "long_desc": "Our CuteBabies onesies are made from soft and breathable fabric that's gentle on your baby's skin. With cute prints and easy snaps, they're perfect for everyday wear.",
+    "reviews": [
+      {
+        "image": "path_to_image",
+        "name": "Liam Rodriguez",
+        "review": "Great quality fabric and stitching."
+      },
+      {
+        "image": "path_to_image",
+        "name": "Ava Wilson",
+        "review": "Love the variety of colors and designs."
+      },
+      {
+        "image": "path_to_image",
+        "name": "Noah Garcia",
+        "review": "They wash well and hold up nicely."
+      }
+    ],
+    "images": {
+      "main_image": "path_to_main_image",
+      "sub_images": {
+        "image1": "path_to_image1",
+        "image2": "path_to_image2",
+        "image3": "path_to_image3"
+      }
+    }
+  },
+    {
+      "product_id": 29,
+      "product_code": "BAPRE29",
+      "product_name": "Baby Nail Clippers",
+      "rating": 4.5,
+      "no_of_person_reviewed": 20,
+      "original_price": 6.99,
+      "discount": 0,
+      "product_status": true,
+      "in_stock": true,
+      "isOrganic": false,
+      "uploaded_date": "2024-05-15T10:00:00Z",
+      "category": "baby",
+      "color": "white",
+      "brand": "TinyTrim",
+      "short_desc": "Keep your baby's nails trimmed safely and easily.",
+      "long_desc": "Our TinyTrim baby nail clippers are designed with safety in mind. With rounded edges and a gentle grip, they make it easy to keep your baby's nails trimmed without worry.",
+      "reviews": [
+        {
+          "image": "path_to_image",
+          "name": "Sophia Brown",
+          "review": "Works great, even on tiny nails."
+        },
+        {
+          "image": "path_to_image",
+          "name": "Noah Garcia",
+          "review": "No more scratches!"
+        },
+        {
+          "image": "path_to_image",
+          "name": "Emma Rodriguez",
+          "review": "Easy to use, even with squirming babies."
+        }
+      ],
+      "images": {
+        "main_image": "path_to_main_image",
+        "sub_images": {
+          "image1": "path_to_image1",
+          "image2": "path_to_image2",
+          "image3": "path_to_image3"
+        }
+      }
+    },
+    {
+      "product_id": 30,
+      "product_code": "BAPRE30",
+      "product_name": "Baby Formula",
+      "rating": 4.7,
+      "no_of_person_reviewed": 25,
+      "original_price": 29.99,
+      "discount": 0,
+      "product_status": true,
+      "in_stock": true,
+      "isOrganic": false,
+      "uploaded_date": "2024-05-16T11:30:00Z",
+      "category": "baby",
+      "color": "white",
+      "brand": "NutriBaby",
+      "short_desc": "Nutritious formula for your baby's growth and development.",
+      "long_desc": "Our NutriBaby baby formula is specially formulated to provide all the essential nutrients for your baby's growth and development. With a blend of vitamins and minerals, it's a convenient and nutritious option for busy parents.",
+      "reviews": [
+        {
+          "image": "path_to_image",
+          "name": "Liam Wilson",
+          "review": "My baby loves the taste!"
+        },
+        {
+          "image": "path_to_image",
+          "name": "Ava Rodriguez",
+          "review": "Easy to mix and doesn't clump."
+        },
+        {
+          "image": "path_to_image",
+          "name": "Noah Martinez",
+          "review": "I trust this brand for my baby's nutrition."
+        }
+      ],
+      "images": {
+        "main_image": "path_to_main_image",
+        "sub_images": {
+          "image1": "path_to_image1",
+          "image2": "path_to_image2",
+          "image3": "path_to_image3"
+        }
+      }
+    },
+      {
+        "product_id": 31,
+        "product_code": "BAPRE31",
+        "product_name": "Baby Socks",
+        "rating": 4.6,
+        "no_of_person_reviewed": 20,
+        "original_price": 9.99,
+        "discount": 0,
+        "product_status": true,
+        "in_stock": true,
+        "isOrganic": false,
+        "uploaded_date": "2024-05-17T09:45:00Z",
+        "category": "baby",
+        "color": "multi-color",
+        "brand": "CozyToes",
+        "short_desc": "Keep your baby's feet warm and cozy with our socks.",
+        "long_desc": "Our CozyToes baby socks are made from soft and stretchy fabric that keeps your baby's feet warm and comfortable. With a variety of colors and patterns, they're perfect for mixing and matching with any outfit.",
+        "reviews": [
+          {
+            "image": "path_to_image",
+            "name": "Emma Wilson",
+            "review": "Adorable and stays on my baby's feet."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Noah Garcia",
+            "review": "Great quality, even after multiple washes."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Sophia Brown",
+            "review": "Love the variety of colors."
+          }
+        ],
+        "images": {
+          "main_image": "path_to_main_image",
+          "sub_images": {
+            "image1": "path_to_image1",
+            "image2": "path_to_image2",
+            "image3": "path_to_image3"
+          }
+        }
+      },
+      {
+        "product_id": 32,
+        "product_code": "BAPRE32",
+        "product_name": "Baby Sun Hat",
+        "rating": 4.7,
+        "no_of_person_reviewed": 18,
+        "original_price": 14.99,
+        "discount": 0,
+        "product_status": true,
+        "in_stock": true,
+        "isOrganic": false,
+        "uploaded_date": "2024-05-18T10:30:00Z",
+        "category": "baby",
+        "color": "pink",
+        "brand": "SunshineBaby",
+        "short_desc": "Protect your baby from the sun with our adorable sun hat.",
+        "long_desc": "Our SunshineBaby sun hat provides UPF 50+ sun protection to keep your baby safe from harmful UV rays. With a wide brim and adjustable chin strap, it's perfect for sunny days at the beach or park.",
+        "reviews": [
+          {
+            "image": "path_to_image",
+            "name": "Liam Martinez",
+            "review": "Adorable and functional."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Ava Wilson",
+            "review": "Stays on my baby's head well."
+          },
+          {
+            "image": "path_to_image",
+            "name": "Noah Smith",
+            "review": "Great quality material."
+          }
+        ],
+        "images": {
+          "main_image": "path_to_main_image",
+          "sub_images": {
+            "image1": "path_to_image1",
+            "image2": "path_to_image2",
+            "image3": "path_to_image3"
+          }
+        }
+      }
+]
