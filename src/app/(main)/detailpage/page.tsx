@@ -62,31 +62,93 @@ const DetailPage= () =>{
     const [mappingArr, setMappingArr] = useState(AllData)
 
     const [isLoading, setIsLoading] = useState(false)
+    const [allState, setAllState] = useState(false)
 
-    useEffect(()=>{
-        // fruits?setSelectedFilterState([...selectFilterState,'fruits']):''
-        // baby?setSelectedFilterState([...selectFilterState,'baby']):''
-        // beverages?setSelectedFilterState([...selectFilterState,'beverages']):''
-        // meats?setSelectedFilterState([...selectFilterState,'meats']):''
-        // biscuits?setSelectedFilterState([...selectFilterState,'biscuits']):''
-        // breads?setSelectedFilterState([...selectFilterState,'breads']):''
-        // breaksfast?setSelectedFilterState([...selectFilterState,'breaksfast']):''
-        // frozen?setSelectedFilterState([...selectFilterState,'frozen']):''
-        // grocery?setSelectedFilterState([...selectFilterState,'grocery']):''
-        // healthcare?setSelectedFilterState([...selectFilterState,'healthcare']):''
-        // household?setSelectedFilterState([...selectFilterState,'household']):''
-        
-        if(fruits){
-            const fruitsArr = mappingArr.filter((value)=>{
-                if(value.category=='fruits'){
+
+    // const handleTrueFunction = ()=>{
+    //     variable
+    // }
+
+    const handleCatoState = ({stateBool, stringValue}:{
+        stateBool:boolean,
+        stringValue:string
+    })=>{
+        if(stateBool){
+            const filterdArr = mappingArr.filter((value)=>{
+                if(value.category==stringValue){
                     return value
                 }
             })
-            // console.log(fruitsArr)
-            setMappingArr(fruitsArr)
+            setMappingArr(filterdArr)
         }
+        else{
+            const filterdArr = mappingArr.filter((value)=>{
+                if(value.category != stringValue){
+                    return value
+                }
+            })
+            setMappingArr(filterdArr)
+
+        }
+    }
+
+
+    useEffect(()=>{
+        handleCatoState({stateBool:fruits,stringValue:'fruits'})
+    },[fruits])
+    useEffect(()=>{
+        handleCatoState({stateBool:baby,stringValue:'baby'})
+    },[baby])
+    useEffect(()=>{
+        handleCatoState({stateBool:beverages,stringValue:'beverages'})
+    },[beverages])
+    useEffect(()=>{
+        handleCatoState({stateBool:meats,stringValue:'meats'})
+    },[meats])
+    useEffect(()=>{
+        handleCatoState({stateBool:biscuits,stringValue:'biscuits'})
+    },[biscuits])
+    useEffect(()=>{
+        handleCatoState({stateBool:breads,stringValue:'breads'})
+    },[breads])
+    useEffect(()=>{
+        handleCatoState({stateBool:breaksfast,stringValue:'breaksfast'})
+    },[breaksfast])
+    useEffect(()=>{
+        handleCatoState({stateBool:frozen,stringValue:'frozen'})
+    },[frozen])
+    useEffect(()=>{
+        handleCatoState({stateBool:grocery,stringValue:'grocery'})
+    },[grocery])
+    useEffect(()=>{
+        handleCatoState({stateBool:healthcare,stringValue:'healthcare'})
+    },[healthcare])
+    useEffect(()=>{
+        handleCatoState({stateBool:household,stringValue:'household'})
+    },[household])
+
+
+    useEffect(()=>{
+        // if(fruits){
+        //     const fruitsArr = mappingArr.filter((value)=>{
+        //         if(value.category=='fruits'){
+        //             return value
+        //         }
+        //     })
+        //     // console.log(fruitsArr)
+        //     setMappingArr(fruitsArr)
+        // }
 
         console.log(selectFilterState)
+        stateArr.map((value)=>{
+            if(value){
+                setAllState(false)
+            }
+        })
+        if(!allState){
+            setMappingArr(AllData)
+            setAllState(true)
+        }
     },[fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household])
 
 
