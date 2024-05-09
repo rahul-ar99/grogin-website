@@ -60,62 +60,62 @@ export default function CatogaryFilter(){
                         <label htmlFor="fruits">Fruits & Vegitables</label>
                     </div>
                     <div className="flex gap-3">
-                        <input type="checkbox" className="bg-red-500" id="baby" onChange={()=>{setbaby(!baby)
+                        <input type="checkbox" className="bg-red-500" id="baby" checked={baby} onChange={()=>{setbaby(!baby)
                         }}/>
                         <label htmlFor="baby">Baby & Pregnancy</label>
                     </div>
                     <div className="flex gap-3" onClick={()=>{
                         
                         }}>
-                        <input type="checkbox" className="bg-red-500" id="beverages" onChange={()=>setbeverages(!beverages)}/>
+                        <input type="checkbox" className="bg-red-500" id="beverages" checked={beverages} onChange={()=>setbeverages(!beverages)}/>
                         <label htmlFor="beverages">Beverages</label>
                     </div>
                     <div className="flex gap-3" onClick={()=>{
                         
                         }}>
-                        <input type="checkbox" className="bg-red-500" id="meats"onChange={()=>setmeats(!meats)} />
+                        <input type="checkbox" className="bg-red-500" id="meats" checked={meats} onChange={()=>setmeats(!meats)} />
                         <label htmlFor="meats">Meats & Seafoods</label>
                     </div>
                     <div className="flex gap-3" onClick={()=>{
                         
                         }}>
-                        <input type="checkbox" className="bg-red-500" id="biscuits" onChange={()=>setbiscuits(!biscuits)}/>
+                        <input type="checkbox" className="bg-red-500" id="biscuits" checked={biscuits} onChange={()=>setbiscuits(!biscuits)}/>
                         <label htmlFor="biscuits">Biscuits & Snacks</label>
                     </div>
                     <div className="flex gap-3" onClick={()=>{
                         
                         }}>
-                        <input type="checkbox" className="bg-red-500" id="breads"onChange={()=>setbreads(!breads)} />
+                        <input type="checkbox" className="bg-red-500" id="breads"  checked={breads} onChange={()=>setbreads(!breads)} />
                         <label htmlFor="breads">Breads & Bakery</label>
                     </div>
                     <div className="flex gap-3" onClick={()=>{
                         
                         }}>
-                        <input type="checkbox" className="bg-red-500" id="Breaksfast"onChange={()=>setbreaksfast(!breaksfast)} />
+                        <input type="checkbox" className="bg-red-500" id="Breaksfast" checked={breaksfast} onChange={()=>setbreaksfast(!breaksfast)} />
                         <label htmlFor="Breaksfast">Breaksfast & Dairy</label>
                     </div>
                     <div className="flex gap-3" onClick={()=>{
                         
                         }}>
-                        <input type="checkbox" className="bg-red-500" id="Frozen"onChange={()=>setfrozen(!frozen)} />
+                        <input type="checkbox" className="bg-red-500" id="Frozen" checked={frozen} onChange={()=>setfrozen(!frozen)} />
                         <label htmlFor="Frozen">Frozen Foods</label>
                     </div>
                     <div className="flex gap-3" onClick={()=>{
                         
                         }}>
-                        <input type="checkbox" className="bg-red-500" id="Grocery" onChange={()=>setgrocery(!grocery)}/>
+                        <input type="checkbox" className="bg-red-500" id="Grocery" checked={grocery}  onChange={()=>setgrocery(!grocery)}/>
                         <label htmlFor="Grocery">Grocery & Staples</label>
                     </div>
                     <div className="flex gap-3" onClick={()=>{
                         
                         }}>
-                        <input type="checkbox" className="bg-red-500" id="Healthcare"onChange={()=>sethealthcare(!healthcare)} />
+                        <input type="checkbox" className="bg-red-500" id="Healthcare" checked={healthcare} onChange={()=>sethealthcare(!healthcare)} />
                         <label htmlFor="Healthcare">Healthcare</label>
                     </div>
                     <div className="flex gap-3" onClick={()=>{
                         
                         }}>
-                        <input type="checkbox" className="bg-red-500" id="Household" onChange={()=>sethousehold(!household)}/>
+                        <input type="checkbox" className="bg-red-500" id="Household" checked={household} onChange={()=>sethousehold(!household)}/>
                         <label htmlFor="Household">Household Needs</label>
                     </div>
                 </div>

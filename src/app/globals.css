@@ -24,12 +24,16 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: Verdana, Tahoma, ;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+p{
+  font-family: Arial, Helvetica;
 }
 
 .wrapper{

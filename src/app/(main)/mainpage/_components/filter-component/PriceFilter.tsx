@@ -1,8 +1,14 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import { useAppContext } from "@/app/context/MyContext"
 
 const PriceFilter = () =>{
+
+    const {
+        lowerPrice, setLowerPrice,
+        higherPrice, setHigherPrice
+    } = useAppContext()
 
     const [inputValue1, setInputValue1] = useState(2)
     const [inputValue2, setInputValue2] = useState(27)
@@ -11,19 +17,24 @@ const PriceFilter = () =>{
 
     const minValue = 5
     useEffect(()=>{
-        console.log(inputValue1,'useEffect')
+        // console.log(inputValue1,'useEffect')
 
     },[inputValue1,inputValue2])
 
     const input1Fun = (element:number) =>{
         setInputValue1(element) 
-        console.log(inputValue1, 'function')
+        // console.log(inputValue1, 'function')
         // const percentage:number = (inputValue1/30)*100
         setinputPercentage((inputValue1/30)*100)
     }
     const input2Fun = (element:number) =>{
         setInputValue2(element) 
-        console.log(inputValue2)
+        // console.log(inputValue2)
+    }
+
+    const handleChangeInput = ()=>{
+        setLowerPrice(inputValue1)
+        setHigherPrice(inputValue2)
     }
 
     const slideOne = () =>{
@@ -61,8 +72,8 @@ const PriceFilter = () =>{
 
                 
                 <div className="flex justify-between items-center mt-10">
-                    <p>Price: $0 - $30</p>
-                    <button className="py-2 px-3 bg-[#E5E7EB] rounded-md">Filter</button>
+                    <p>Price: ${lowerPrice} - ${higherPrice}</p>
+                    <button className="py-2 px-3 bg-[#E5E7EB] rounded-md hover:bg-[#c7c9cc]" onClick={handleChangeInput}>Filter</button>
                 </div>
             </div>
 }

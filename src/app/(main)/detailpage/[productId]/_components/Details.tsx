@@ -6,11 +6,13 @@ import { RootState } from "@/app/redux/store/page"
 import { addToFav, removeFromFav } from "@/app/redux/favorite/page"
 import { UseDispatch, useDispatch } from "react-redux"
 import { useSelector } from "react-redux"
-
-
+import MainImage from '../../../../../../public/assets/images/stair.jpg'
+import {  SideBySideMagnifier} from 'react-image-magnifiers'
 
 
 const Detail= ({productId}:{productId:number}) =>{
+
+    const [zoomState, setZoomState] = useState(false)
 
      
     // userSelected is import data from json and 
@@ -28,7 +30,7 @@ const Detail= ({productId}:{productId:number}) =>{
     const [noOfItems, setNoOfItems] = useState(1)
 
 
-    useEffect(()=>console.log(fav, productId))
+    // useEffect(()=>console.log(fav, productId))
 
 
     return(
@@ -36,9 +38,19 @@ const Detail= ({productId}:{productId:number}) =>{
             <div className="min-w-[50%]">
                 <div className="w-full">
                     <div className="w-full relative">
-                        <div className="w-full">
-                            <Image className="w-full" src={require('../../../../../../public/assets/images/detail-main.jpg')} alt="banana" />
+                        <div className="w-full h-[500px]" >
+                        <SideBySideMagnifier
+                                imageSrc='../../../../../../public/assets/images/stair.jpg'
+                                imageAlt="Example"
+                                // largeImageSrc="./large-image.jpg" // Optional
+                                />
+                         
+                            {/* <Image className="w-full" src={require('../../../../../../public/assets/images/detail-main.jpg')} alt="banana" /> */}
                         </div>
+                        {/* <div className="w-[800px] h-[800px] absolute left-0 bg-red-500 top-0">
+
+                        </div> */}
+                        
                         <div className="absolute top-2 left-2">
                             <p className="bg-red-500 text-white font-semibold rounded-3xl text-xs w-min py-1 px-2 mb-2">{userSelected.discount}%</p>
                             {

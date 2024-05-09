@@ -22,85 +22,46 @@ export default function SelectedFilter(){
             // state,setState
         }  = useAppContext();
 
+    const stateArr = [fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household]
+    const setStateArr = [setfruits, setbaby, setbeverages, setmeats, setbiscuits, setbreads, setbreaksfast, setfrozen, setgrocery, sethealthcare, sethousehold]
+    const stringArr = ['Fruits & Vegitables', 'Baby & Pregnancy', 'Beverages', 'Meats & Seafoods', 'Biscuits & Snacks', 'Breads & Bakery', 'Breaksfast & Dairy', 'Frozen Foods', 'Grocery & Staples', 'Healthcare', 'Household Needs']
 
 
+
+
+    // its for clear state for set all state to false
+
+    // const [clearState, setClearState] = useState(false)
+    // useEffect(()=>{
+    //     for (let arr in stateArr) {
+    //         if(arr){
+    //             setClearState(true)
+    //             break
+    //         }else{
+    //             setClearState(false)
+    //         }
+    //     }
+    // },[fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household])
 
     return  <div>
-                <div className="flex flex-wrap gap-x-5 mb-5">
-                 {fruits &&
-                        <div className="flex items-center gap-1">
-                            <i className="fa fa-close"></i>
-                            <p>Fruits & Vegitables</p>
-                        </div>
-                 }
-                 {baby &&
-                        <div className="flex items-center gap-1">
-                            <i className="fa fa-close"></i>
-                            <p>Baby</p>
-                        </div>
-                 }
-                 {beverages &&
-                        <div className="flex items-center gap-1">
-                            <i className="fa fa-close"></i>
-                            <p>Beverages</p>
-                        </div>
-                 }
-                 {meats &&
-                        <div className="flex items-center gap-1">
-                            <i className="fa fa-close"></i>
-                            <p>Meats & Seafoods</p>
-                        </div>
-                 }
-                 {biscuits &&
-                        <div className="flex items-center gap-1">
-                            <i className="fa fa-close"></i>
-                            <p>Biscuits & Snacks</p>
-                        </div>
-                 }
-                 {breads &&
-                        <div className="flex items-center gap-1">
-                            <i className="fa fa-close"></i>
-                            <p>Breads & Bakery</p>
-                        </div>
-                 }
-                 {breaksfast &&
-                        <div className="flex items-center gap-1">
-                            <i className="fa fa-close"></i>
-                            <p>Breakfast & Dairy</p>
-                        </div>
-                 }
-                 {frozen &&
-                            <div className="flex items-center gap-1">
-                                <i className="fa fa-close"></i>
-                                <p>Frozen Foods</p>
-                            </div>
-                 }
-                 {grocery &&
-                            <div className="flex items-center gap-1">
-                                <i className="fa fa-close"></i>
-                                <p>Grocery & Staples</p>
-                            </div>
-                 }
-                 {healthcare &&
-                            <div className="flex items-center gap-1">
-                                <i className="fa fa-close"></i>
-                                <p>Healthcare</p>
-                            </div>
-                 }
-                 {household &&
-                            <div className="flex items-center gap-1">
-                                <i className="fa fa-close"></i>
-                                <p>Household Needs</p>
-                            </div>
-                 }
-                    <div className="flex items-center gap-1">
+                <div className="flex flex-wrap gap-x-5 mb-5 gap-y-2">
+                    {
+                        stateArr.map((value,index)=>{
+                            if(value){
+                                return <div className="flex items-center gap-1 border cursor-default bg-slate-200 px-1 rounded-xl" onClick={()=>setStateArr[index](false)}>
+                                            <i className="fa fa-close"></i>
+                                            <p className="cursor-default">{stringArr[index]}</p>
+                                        </div>
+                            }
+                        })
+                    }
+                    {/* {
+                        clearState &&  <div className="flex items-center gap-1">
                         <i className="fa fa-close"></i>
                         <p>Clear Search</p>
                     </div>
-                    <div className="flex items-center gap-1">
-                        <i className="fa fa-close"></i>
-                        <p>Fruits & vegitables</p>
-                    </div>
+                    } */}
+                   
                 </div>
             </div>
 }   

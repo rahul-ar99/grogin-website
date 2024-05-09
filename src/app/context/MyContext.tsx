@@ -20,6 +20,9 @@ export function AppWrapper({children}:{
     const [grocery, setgrocery] = useState(false)
     const [healthcare, sethealthcare] = useState(false)
     const [household, sethousehold] = useState(false)
+    const [lowerPrice, setLowerPrice] = useState(0)
+    const [higherPrice, setHigherPrice]= useState(30)
+    const [inStock, setInStock]= useState(true)
 
 
 
@@ -38,6 +41,8 @@ export function AppWrapper({children}:{
             grocery, setgrocery,
             healthcare, sethealthcare,
             household, sethousehold,
+            lowerPrice, setLowerPrice,
+            higherPrice, setHigherPrice
             }}>
             {children}
         </AppContext.Provider>

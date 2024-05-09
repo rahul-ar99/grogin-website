@@ -24,13 +24,11 @@ interface Product{
 
 const DetailPage= () =>{
 
-
     const fav = useSelector((state:RootState)=>state.favorite.value)
 
     const dispatch = useDispatch()
 
     const [likes, setLikes] = useState<boolean[]>(Array(16).fill(false))
-
 
     // like icon color change
     const handleLikeClick = (index:number) => {
@@ -38,8 +36,6 @@ const DetailPage= () =>{
         updatedLikes[index] = !updatedLikes[index];
         setLikes(updatedLikes);
     }
-
-
 
     const { 
         fruits,setfruits, 
@@ -53,13 +49,14 @@ const DetailPage= () =>{
         grocery,setgrocery, 
         healthcare,sethealthcare, 
         household,sethousehold,
+        lowerPrice, higherPrice
     }  = useAppContext();
 
     const stateArr = [fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household]
 
     const [selectFilterState, setSelectedFilterState] = useState([])
 
-    const [mappingArr, setMappingArr] = useState(AllData)
+    const [mappingArr, setMappingArr] = useState([])
 
     const [isLoading, setIsLoading] = useState(false)
     const [allState, setAllState] = useState(false)
@@ -69,30 +66,49 @@ const DetailPage= () =>{
     //     variable
     // }
 
+
+
+    useEffect(()=>{
+        if(!fruits && !baby && !beverages && !meats && !biscuits && !breads && !breaksfast && !frozen && !grocery && !healthcare && !household){
+            setMappingArr(AllData)
+        }else if(fruits && baby && beverages && meats && biscuits && breads && breaksfast && frozen && grocery && healthcare && household){
+            setMappingArr(AllData)
+        }
+    },[fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household])
+
     const handleCatoState = ({stateBool, stringValue}:{
         stateBool:boolean,
         stringValue:string
-    })=>{
-        if(stateBool){
-            const filterdArr = mappingArr.filter((value)=>{
+        })=>{
+            if(stateBool){
+                const filterdArr = AllData.filter((value)=>{
                 if(value.category==stringValue){
-                    return value
-                }
-            })
-            setMappingArr(filterdArr)
-        }
-        else{
-            const filterdArr = mappingArr.filter((value)=>{
-                if(value.category != stringValue){
-                    return value
-                }
-            })
-            setMappingArr(filterdArr)
+                        return value
+                    }
+                })
+                const afterMapping = [...mappingArr,...filterdArr]
+                setMappingArr(afterMapping)
+            }
+            else{
+                const filterdArr = mappingArr.filter((value)=>{
+                    if(value.category != stringValue){
+                        return value
+                    }
+                })
+                setMappingArr(filterdArr)
 
-        }
+            }
     }
 
+    useEffect(()=>{
+        console.log(lowerPrice, higherPrice)
+    },[lowerPrice, higherPrice])
 
+
+
+
+
+    // change state with every change of catogary filter
     useEffect(()=>{
         handleCatoState({stateBool:fruits,stringValue:'fruits'})
     },[fruits])
@@ -128,6 +144,16 @@ const DetailPage= () =>{
     },[household])
 
 
+
+    // sort
+    const handleSort = ()=>{
+        const sortedData =  [...mappingArr].sort((a,b)=>{
+            const date_a = new Date(a.uploaded_date)
+            const date_b = new Date(b.uploaded_date)
+        })
+    }
+
+
     useEffect(()=>{
         // if(fruits){
         //     const fruitsArr = mappingArr.filter((value)=>{
@@ -139,16 +165,16 @@ const DetailPage= () =>{
         //     setMappingArr(fruitsArr)
         // }
 
-        console.log(selectFilterState)
-        stateArr.map((value)=>{
-            if(value){
-                setAllState(false)
-            }
-        })
-        if(!allState){
-            setMappingArr(AllData)
-            setAllState(true)
-        }
+        // console.log(selectFilterState)
+        // stateArr.map((value)=>{
+        //     if(value){
+        //         setAllState(false)
+        //     }
+        // })
+        // if(!allState){
+        //     setMappingArr(AllData)
+        //     setAllState(true)
+        // }
     },[fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household])
 
 
@@ -161,9 +187,9 @@ const DetailPage= () =>{
             <div className="flex flex-wrap">
                 {mappingArr.map((value:any,index)=>{
                     console.log(value)
-                    
-                    return<div className="w-[20%] h-[420px] border" key={index}>
-                          <Link href={`detailpage/${index+1}`} className="cursor-default">
+                    if(value.original_price >= lowerPrice && value.original_price <= higherPrice){
+                        return<div className="w-[20%] h-[420px] border" key={index}>
+                            <Link href={`detailpage/${index+1}`} className="cursor-default">
                                 <div className=" relative">
                                     <div>   
                                         <Image src={require('../../../../public/assets/images/product_1.jpg')} alt="product" />
@@ -209,9 +235,11 @@ const DetailPage= () =>{
                              </Link>
                             </div>
                 
-                }
-            )}
-                
+            }
+            return undefined
+            }
+        )}
+        
             </div>
     </>
     
