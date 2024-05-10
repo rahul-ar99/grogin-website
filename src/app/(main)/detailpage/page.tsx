@@ -175,8 +175,8 @@ const DetailPage= () =>{
         const sortedData =  [...mappingArr].sort((a:any,b:any)=>{
             const date_a:any = new Date(a.uploaded_date)
             const date_b:any = new Date(b.uploaded_date)
-            const a_price = (a.original_price * a.discount)*100
-            const b_price = (b.original_price * b.discount)*100
+            const a_price = (a.original_price * (100 - a.discount))*100
+            const b_price = (b.original_price * (100 - b.discount))*100
             console.log(a.no_of_person_reviewed,b.no_of_person_reviewed)
             if(sortState=='latest'){
                 return date_a - date_b

@@ -50,9 +50,17 @@ const Detail= ({productId}:{productId:number}) =>{
                         <div className="w-full" >
                             <Image className="w-full" src={require(`../../../../../../public/assets/images/products/images_${(productId%16)+1}.png`)} alt="itemImage" />
                         </div>
-                        {/* <div className="w-[800px] h-[800px] absolute left-0 bg-red-500 top-0">
-
-                        </div> */}
+                        { zoomState && <>
+                            <div className="flex justify-center items-center w-[100vw] h-[100vh] fixed left-0 bg-slate-500 top-0 z-20">
+                                <div className="w-[900px] aspect-square bg-white relative">
+                                    <Image className="w-full" src={require(`../../../../../../public/assets/images/products/images_${(productId%16)+1}.png`)} alt="itemImage" />
+                                    <div className="absolute right-0 top-0">
+                                        <button className="p-2" onClick={()=>setZoomState(false)}>x</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </>
+                        }
                         
                         <div className="absolute top-2 left-2">
                             <p className="bg-red-500 text-white font-semibold rounded-3xl text-xs w-min py-1 px-2 mb-2">{userSelected.discount}%</p>
@@ -60,7 +68,7 @@ const Detail= ({productId}:{productId:number}) =>{
                                 userSelected.isOrganic &&<p className="bg-green-500 text-white font-semibold rounded-3xl text-xs w-min py-1 px-2">Organic</p>
                             }
                         </div>
-                        <div className="absolute bottom-10 left-2 w-20">
+                        <div className="absolute bottom-10 left-2 w-20" onClick={()=>setZoomState(true)}>
                             <Image src={require('../../../../../../public/assets/images/zoom.png')} alt="zoom" />
                         </div>
                     </div>
