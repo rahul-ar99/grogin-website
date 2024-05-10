@@ -10,83 +10,12 @@ import { useSelector } from "react-redux"
 import AllData from '../../../../public/assets/json/addData.json'
 import { useAppContext } from "@/app/context/MyContext"
 
-interface AllDataInterface {
-        product_id: number
-        product_code: string
-        product_name: string
-        rating: number
-        no_of_person_reviewed: number
-        original_price: number
-        discount: number
-        product_status: boolean
-        in_stock: boolean
-        isOrganic: boolean
-        uploaded_date:string
-        category:string
-        color:string
-        brand:string
-        short_desc:string
-        long_desc:string
-        reviews: Review[],
-        images: ImageCollection
-}
 
-
-interface Review {
-    image: string;
-    name: string;
-    review: string;
-  }
-  
-  interface ImageCollection {
-    main_image: string;
-    sub_images: {
-      image1: string;
-      image2: string;
-      image3: string;
-    };
-  }
-
-interface Product{
-
-    id:number;
-    name:string;
-    imageUrl:string;
-    price:number;
-    discountPrice:number;
-    rating:number;
-    inStock:boolean;
-}
-
-interface AppContextInterface {
-    fruits: boolean;
-    setfruits: (fruits: boolean) => void;
-    baby: boolean;
-    setbaby: (baby: boolean) => void;
-    beverages: boolean;
-    setbeverages: (beverages: boolean) => void;
-    meats: boolean;
-    setmeats: (beverages: boolean) => void;
-    biscuits: boolean;
-    setbiscuits: (beverages: boolean) => void;
-    breads: boolean;
-    setbreads: (beverages: boolean) => void;
-    // ... other categories (meats, biscuits, breads, etc.)
-    breaksfast: boolean;
-    setbreaksfast: (breaksfast: boolean) => void;
-    frozen: boolean;
-    setfrozen: (frozen: boolean) => void;
-    grocery: boolean;
-    setgrocery: (grocery: boolean) => void;
-    healthcare: boolean;
-    sethealthcare: (healthcare: boolean) => void;
-    household: boolean;
-    sethousehold: (household: boolean) => void;
-    lowerPrice: number; // Optional, depending on your context
-    higherPrice: number; // Optional, depending on your context
-  }
 
 const DetailPage= () =>{
+
+    // useEffect(()=>setfruits(true),)
+
 
     // const AllData :AllDataInterface[] = AllData1
 
@@ -130,43 +59,18 @@ const DetailPage= () =>{
     const {sethousehold}:any = useAppContext();
     const {lowerPrice}:any = useAppContext();
     const {higherPrice}:any = useAppContext();
-    // const { 
-    //     fruits,setfruits, 
-    //     baby,setbaby, 
-    //     beverages,setbeverages, 
-    //     meats,setmeats, 
-    //     biscuits,setbiscuits, 
-    //     breads,setbreads, 
-    //     breaksfast,setbreaksfast, 
-    //     frozen,setfrozen, 
-    //     grocery,setgrocery, 
-    //     healthcare,sethealthcare, 
-    //     household,sethousehold,
-    //     lowerPrice, higherPrice
-    // }  = useAppContext();
+    const {sortState}:any = useAppContext()
 
-    const stateArr = [fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household]
+    useEffect(()=>console.log(sortState),[sortState])
+
+    // const stateArr = [fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household]
     const setstateArr = [setfruits, setbaby, setbeverages, setmeats, setbiscuits, setbreads, setbreaksfast, setfrozen, setgrocery, sethealthcare, sethousehold]
-    const [selectFilterState, setSelectedFilterState] = useState([])
 
     const [mappingArr, setMappingArr]:any = useState([])
 
-    const [isLoading, setIsLoading] = useState(false)
-    const [allState, setAllState] = useState(false)
-
-
-    // const handleTrueFunction = ()=>{
-    //     variable
-    // }
 
 
 
-    useEffect(()=>{
-        if(!fruits && !baby && !beverages && !meats && !biscuits && !breads && !breaksfast && !frozen && !grocery && !healthcare && !household){
-            setMappingArr(AllData)
-            console.log('if statement')
-        }
-    })
 
     useEffect(()=>{
         setstateArr.map((setState)=>{
@@ -178,43 +82,48 @@ const DetailPage= () =>{
         stateBool:boolean,
         stringValue:string
         })=>{
-            stateArr.map((value)=>{
-                if(value){
-                    setCheckingCato(true)
-                }
-            })
-
-            if(stateBool){
-                if(checkingCato){
-                    const filterdArr = AllData.filter((value)=>{
-                        if(value.category==stringValue){
-                                return value
-                            }
-                        })
-                        const afterMapping = [...mappingArr, ...filterdArr]
-                        setMappingArr(afterMapping)
-                        }
-                        else{
-                            const filterdArr = AllData.filter((value)=>{
+            if(!checkingCato){
+                setMappingArr([])
+                const filterdArr = AllData.filter((value)=>{
+                    if(value.category==stringValue){
+                            return value
+                    }})
+                const afterMapping = [...filterdArr]
+                setMappingArr(afterMapping)
+                setCheckingCato(true)
+                // console.log(checkingCato, 'if')
+            }else if(checkingCato){
+                if(stateBool){
+                    // if(checkingCato){
+                        const filterdArr = AllData.filter((value)=>{
                             if(value.category==stringValue){
                                     return value
+                            }})
+                        const afterMapping = [...mappingArr, ...filterdArr]
+                        setMappingArr(afterMapping)
+                    }
+                    else{
+                        const filterdArr = mappingArr.filter((value:any)=>{
+                            if(value.category!=stringValue){
+                                    return value
                                 }
-                            })
-                            const afterMapping = [...filterdArr]
-                            
-                            setMappingArr(afterMapping)
+                        })
+                        const afterMapping = [...filterdArr]
+                        
+                        setMappingArr(afterMapping)
                     }
-            }
-            else{
-                const filterdArr = mappingArr.filter((value:any)=>{
-                    if(value.category != stringValue){
-                        return value
-                    }
-                })
-                setMappingArr(filterdArr)
+                }
+                else{
+                    const filterdArr = mappingArr.filter((value:any)=>{
+                        if(value.category != stringValue){
+                            return value
+                        }
+                    })
+                    setMappingArr(filterdArr)
 
-            }
+                // }
     }
+}
 
     useEffect(()=>{
         console.log(lowerPrice, higherPrice)
@@ -263,34 +172,54 @@ const DetailPage= () =>{
 
     // sort
     const handleSort = ()=>{
-        const sortedData =  [...mappingArr].sort((a,b)=>{
-            const date_a = new Date(a.uploaded_date)
-            const date_b = new Date(b.uploaded_date)
-            return date_a.getTime() - date_b.getTime();
+        const sortedData =  [...mappingArr].sort((a:any,b:any)=>{
+            const date_a:any = new Date(a.uploaded_date)
+            const date_b:any = new Date(b.uploaded_date)
+            const a_price = (a.original_price * a.discount)*100
+            const b_price = (b.original_price * b.discount)*100
+            console.log(a.no_of_person_reviewed,b.no_of_person_reviewed)
+            if(sortState=='latest'){
+                return date_a - date_b
+            }else if(sortState =='popularity'){
+                return b.no_of_person_reviewed - a.no_of_person_reviewed
+            }else if(sortState == 'lowestPrice'){
+                return a_price - b_price
+            }else if(sortState == 'highestPrice'){
+                return b_price - a_price
+            }
+            return 0
         })
+        console.log(sortedData)
+        setMappingArr(sortedData)
     }
+    
+
+    useEffect(()=>{
+        handleSort()
+    },[sortState])
 
 
-    // useEffect(()=>{
+    useEffect(()=>{
+        if(!fruits && !baby && !beverages && !meats && !biscuits && !breads && !breaksfast && !frozen && !grocery && !healthcare && !household){
+            setMappingArr(AllData)
+            setCheckingCato(false)
+        }
 
-    // },[fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household])
-
-
-
-    const list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
-
-
+   
+    },[fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household])
 
     return <>
             <div className="flex flex-wrap">
                 {mappingArr.map((value:any,index:number)=>{
+                    const imageName = value.product_id % 16
+                    console.log(imageName)
                     // console.log(value)
                     if(value.original_price >= lowerPrice && value.original_price <= higherPrice){
                         return<div className="w-[20%] h-[420px] border" key={index}>
                             <Link href={`detailpage/${value.product_id}`} className="cursor-default">
                                 <div className=" relative">
                                     <div>   
-                                        <Image src={require('../../../../public/assets/images/product_1.jpg')} alt="product" />
+                                        <Image src={require(`../../../../public/assets/images/products/images_${(value.product_id%16)+1}.png`)} alt="product" />
                                     </div>
                                     <div>
                                         <div className="absolute top-3 right-3 z-40 cursor-pointer" onClick={(e)=>{

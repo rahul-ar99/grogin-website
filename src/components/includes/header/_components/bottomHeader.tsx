@@ -1,6 +1,10 @@
 
-
 const BottomHeader = () =>{
+
+
+
+
+
     return <div className="w-full border-b border-b-gray-200">
         <div className="wrapper">
             <div className="w-full flex justify-between font-bold py-4">

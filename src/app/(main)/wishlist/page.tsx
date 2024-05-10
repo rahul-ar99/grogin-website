@@ -31,28 +31,34 @@ const wishlist = ()=>{
 
 
     const favFunction = ()=>{
-        const newFavItems = fav.map((favValue:number,index:number)=>{
-            return AllData[favValue-1]
+        const newFavItems:any = AllData.map((AllDataValue)=>{
+            if(fav.indexOf(AllDataValue.product_id ) != -1){
+                return AllDataValue
+            }
+
         })
         setFavItems(newFavItems)
     }
     useEffect(()=>{
         favFunction()
-        // console.log(favItems)
+        setTimeout(() => {
+            setIsLoading(true)
+        }, 1000);
+        console.log(fav)
         
     },[fav])
 
     return <>
+
     <Header />
     <div className="wrapper">
-
+        <h3 className="text-3xl font-bold">WishList</h3>
     <div className="flex flex-wrap min-h-[500px]">
-        <p>{fav}</p>
         {favItems.length !=0 ?<>
         {favItems.map((value:any, index:number)=>{
-            console.log(value)
-            // setFavItems(AllData[value-1])
-                return <div className="w-[20%] h-[420px] border" key={index}>
+            if(value!=undefined){
+
+            return <div className="w-[20%] h-[420px] border" key={index}>
                   <Link href={`/detailpage/${value.product_id}`} className="cursor-default">
                         <div className="bg-red-400 relative">
                             <div>   
@@ -97,6 +103,8 @@ const wishlist = ()=>{
                         </div>
                      </Link>
                     </div>
+            }
+
         })}
         </>:<>
             <div className="wrapper min-h-[500px]">

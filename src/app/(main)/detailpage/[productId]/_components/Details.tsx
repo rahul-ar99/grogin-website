@@ -9,14 +9,23 @@ import { useSelector } from "react-redux"
 import MainImage from '../../../../../../public/assets/images/stair.jpg'
 
 
-const Detail= ({productId}:{productId:any}) =>{
+const Detail= ({productId}:{productId:number}) =>{
 
     const [zoomState, setZoomState] = useState(false)
 
+    const [userSelected, setUserSelected] = useState<any>({})
      
     // userSelected is import data from json and 
-    // useEffect(()=>console.log(typeof(productId)))
-    const userSelected = AllData[productId-1]
+    useEffect(()=>{
+
+        for (let index = 0; index < AllData.length; index++) {
+            if(AllData[index].product_id == productId){
+                setUserSelected(AllData[index])
+                break
+            }  
+        }
+    })
+
 
 
     const fav = useSelector((state:RootState)=>state.favorite.value)
@@ -38,8 +47,8 @@ const Detail= ({productId}:{productId:any}) =>{
             <div className="min-w-[50%]">
                 <div className="w-full">
                     <div className="w-full relative">
-                        <div className="w-full h-[500px]" >
-                        {/* <Image className="w-full" src={require('../../../../../../public/assets/images/detail-main.jpg')} alt="banana" /> */}
+                        <div className="w-full" >
+                            <Image className="w-full" src={require(`../../../../../../public/assets/images/products/images_${(productId%16)+1}.png`)} alt="itemImage" />
                         </div>
                         {/* <div className="w-[800px] h-[800px] absolute left-0 bg-red-500 top-0">
 
@@ -59,13 +68,13 @@ const Detail= ({productId}:{productId:any}) =>{
                 <div className="w-full flex justify-center">
                     <div className="flex gap-2">
                         <div className="w-20">
-                            <Image src={require('../../../../../../public/assets/images/details-short-1.jpg')} alt="banana" />
+                            <Image src={require(`../../../../../../public/assets/images/products/images_${(productId%16)+1}.png`)} alt="itemImage" />
                         </div>
                         <div className="w-20">
-                            <Image src={require('../../../../../../public/assets/images/details-short-2.jpg')} alt="banana" />
+                            <Image src={require(`../../../../../../public/assets/images/products/images_${(productId%16)+1}.png`)} alt="itemImage" />
                         </div>
                         <div className="w-20">
-                            <Image src={require('../../../../../../public/assets/images/details-short-3.jpg')} alt="banana" />
+                            <Image src={require(`../../../../../../public/assets/images/products/images_${(productId%16)+1}.png`)} alt="itemImage" />
                         </div>
                     </div>
                 </div>
@@ -154,12 +163,13 @@ const Detail= ({productId}:{productId:any}) =>{
                     <div className="flex gap-6">
                         <div className="flex items-center gap-2">
                             <div className="w-[50px] aspect-square flex justify-center items-center border border-[#E5E7EB] rounded-xl text-2xl" onClick={()=>{
-                                const productIdInt = parseInt(productId)
-                                fav.indexOf(parseInt(productId))==-1?dispatch(addToFav(productIdInt)):dispatch(removeFromFav(parseInt(productId)))
+                                // const productIdInt = parseInt(productId)
+                                // fav.indexOf(parseInt(productId))==-1?dispatch(addToFav(parseInt(productId))):dispatch(removeFromFav(parseInt(productId)))
+                                fav.indexOf(userSelected.product_id)==-1?dispatch(addToFav(userSelected.product_id)):dispatch(removeFromFav(userSelected.product_id))
                             }}>
-                                <i className={`fa fa-heart ${fav.indexOf(parseInt(productId))!=-1?'text-red-500':'text-black'}`}></i>
+                                <i className={`fa fa-heart ${fav.indexOf(userSelected.product_id)!=-1?'text-red-500':'text-black'}`}></i>
                             </div>
-                            <p className="text-lg">{fav.indexOf(parseInt(productId))!=-1?'Remove From Wishlist':'Add to Wishlist'}</p>
+                            <p className="text-lg">{fav.indexOf(userSelected.product_id)!=-1?'Remove From Wishlist':'Add to Wishlist'}</p>
                         </div>
                         <div className="flex items-center gap-2">
                             <div className="w-[50px] aspect-square flex justify-center items-center border border-[#E5E7EB] rounded-xl text-2xl">

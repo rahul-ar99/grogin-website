@@ -4,16 +4,36 @@ import { useEffect, useState } from "react"
 import AllData from '../../../../../../public/assets/json/addData.json'
 
 
+interface UserSelect{
+    review:string;
+    name:string;
+}
+
 const Description = ({productId}:{productId:number}) =>{
 
 
 
+    // const userSelected = AllData.map((value)=>{
+    //     if(value.product_id != -1){
+    //         retu
+    //     }
+    // })
 
-    const userSelected = AllData[productId]
+    const [userSelected, setUserSelected] =useState<any>({});
+
+    useEffect(()=>{
+
+        for (let index = 0; index < AllData.length; index++) {
+            if(AllData[index].product_id==productId){
+                setUserSelected(AllData[index])
+                break
+            }  
+        }
+    })
+    // const userSelected = AllData[productId]
 
     const [descState, setDescState] = useState(true)
 
-    useEffect(()=>console.log(productId))
 
     return <div className="py-20">
                     <div className="flex gap-7 mb-5 border-b-2 border-b-[#E5E7EB]   ">
@@ -28,9 +48,8 @@ const Description = ({productId}:{productId:number}) =>{
                     :
                     <div className="">
                         {
-                            userSelected.reviews.map((value)=>{
-                                return  <>
-                                            <div className="flex gap-5 mb-3">
+                            userSelected.reviews.map((value:any, index:number)=>{
+                                return <div className="flex gap-5 mb-3" key={index}>
                                                 <div className="w-[50px]">
                                                     <Image src={userImg} alt="userImage" />
                                                 </div>
@@ -39,7 +58,6 @@ const Description = ({productId}:{productId:number}) =>{
                                                     <p>{value.review}</p>
                                                 </div>
                                             </div>
-                                        </>
                             })
                         }
                     </div>

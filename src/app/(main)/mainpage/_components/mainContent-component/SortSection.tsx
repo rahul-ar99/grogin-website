@@ -1,6 +1,12 @@
+import { useAppContext } from "@/app/context/MyContext"
+import { useEffect } from "react"
 
 
 const SortSection = () =>{
+
+
+    const {setSortState}:any = useAppContext()
+
     return  <div className="flex justify-between items-center py-2 px-2 bg-gray-100 my-3 rounded-xl">
                 <div>
                     <p>Showing all 16 results</p>
@@ -8,10 +14,11 @@ const SortSection = () =>{
                 <div className="flex items-center" >
                     <div className="flex mr-16 ">
                         <p>Sort:</p>
-                        <select name="sorting" id="">
-                            <option value="latest">Sort by Latest</option>
-                            <option value="lowest">Sort by Lowest Price</option>
-                            <option value="highest">Sort by Highest Price</option>
+                        <select name="sorting" id="" onChange={(e)=>setSortState(e.target.value)}>
+                            <option value="popularity">Popularity</option>
+                            <option value="latest">Newest first</option>
+                            <option value="lowestPrice">Price Low - High</option>
+                            <option value="highestPrice">Price High to Low</option>
                         </select>
                     </div>
                     <p>|</p>
