@@ -32,7 +32,7 @@ const Related = () =>{
                     {relatedProducts.map((value:any,index:number)=>{
                             return <div className="w-[20%] border" key={index}>
                             <Link href={`/detailpage/${index+1}`}>
-                                    <div className="bg-red-400 relative">
+                                    <div className="relative">
                                         <div>   
                                             <Image src={require(`../../../../../../public/assets/images/products/images_${(value.product_id%16)+1}.png`)} alt="product" />
                                         </div>

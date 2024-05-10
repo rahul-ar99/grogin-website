@@ -60,9 +60,9 @@ const wishlist = ()=>{
 
             return <div className="w-[20%] h-[420px] border" key={index}>
                   <Link href={`/detailpage/${value.product_id}`} className="cursor-default">
-                        <div className="bg-red-400 relative">
+                        <div className=" relative">
                             <div>   
-                                <Image src={require('../../../../public/assets/images/product_1.jpg')} alt="product" />
+                                <Image src={require(`../../../../public/assets/images/products/images_${(value.product_id%16)+1}.png`)} alt="product" />
                             </div>
                             <div>
                                 <div className="absolute top-3 right-3 z-40 cursor-pointer" onClick={(e)=>{
