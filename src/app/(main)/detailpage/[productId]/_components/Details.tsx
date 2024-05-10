@@ -55,7 +55,7 @@ const Detail= ({productId}:{productId:number}) =>{
                                 <div className="w-[900px] aspect-square bg-white relative">
                                     <Image className="w-full" src={require(`../../../../../../public/assets/images/products/images_${(productId%16)+1}.png`)} alt="itemImage" />
                                     <div className="absolute right-0 top-0">
-                                        <button className="p-2" onClick={()=>setZoomState(false)}>x</button>
+                                        <button className="p-2" onClick={()=>setZoomState(false)}>x close</button>
                                     </div>
                                 </div>
                             </div>
