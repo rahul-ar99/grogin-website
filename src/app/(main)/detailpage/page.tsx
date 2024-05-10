@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { RootState } from "../../redux/store/page"
 import { addToFav, removeFromFav } from "../../redux/favorite/page"
 import { useDispatch } from "react-redux"
@@ -10,6 +10,42 @@ import { useSelector } from "react-redux"
 import AllData from '../../../../public/assets/json/addData.json'
 import { useAppContext } from "@/app/context/MyContext"
 
+interface AllDataInterface {
+        product_id: number
+        product_code: string
+        product_name: string
+        rating: number
+        no_of_person_reviewed: number
+        original_price: number
+        discount: number
+        product_status: boolean
+        in_stock: boolean
+        isOrganic: boolean
+        uploaded_date:string
+        category:string
+        color:string
+        brand:string
+        short_desc:string
+        long_desc:string
+        reviews: Review[],
+        images: ImageCollection
+}
+
+
+interface Review {
+    image: string;
+    name: string;
+    review: string;
+  }
+  
+  interface ImageCollection {
+    main_image: string;
+    sub_images: {
+      image1: string;
+      image2: string;
+      image3: string;
+    };
+  }
 
 interface Product{
 
@@ -22,13 +58,45 @@ interface Product{
     inStock:boolean;
 }
 
+interface AppContextInterface {
+    fruits: boolean;
+    setfruits: (fruits: boolean) => void;
+    baby: boolean;
+    setbaby: (baby: boolean) => void;
+    beverages: boolean;
+    setbeverages: (beverages: boolean) => void;
+    meats: boolean;
+    setmeats: (beverages: boolean) => void;
+    biscuits: boolean;
+    setbiscuits: (beverages: boolean) => void;
+    breads: boolean;
+    setbreads: (beverages: boolean) => void;
+    // ... other categories (meats, biscuits, breads, etc.)
+    breaksfast: boolean;
+    setbreaksfast: (breaksfast: boolean) => void;
+    frozen: boolean;
+    setfrozen: (frozen: boolean) => void;
+    grocery: boolean;
+    setgrocery: (grocery: boolean) => void;
+    healthcare: boolean;
+    sethealthcare: (healthcare: boolean) => void;
+    household: boolean;
+    sethousehold: (household: boolean) => void;
+    lowerPrice: number; // Optional, depending on your context
+    higherPrice: number; // Optional, depending on your context
+  }
+
 const DetailPage= () =>{
+
+    // const AllData :AllDataInterface[] = AllData1
 
     const fav = useSelector((state:RootState)=>state.favorite.value)
 
     const dispatch = useDispatch()
 
     const [likes, setLikes] = useState<boolean[]>(Array(16).fill(false))
+
+    const [checkingCato, setCheckingCato] = useState(false)
 
     // like icon color change
     const handleLikeClick = (index:number) => {
@@ -37,26 +105,51 @@ const DetailPage= () =>{
         setLikes(updatedLikes);
     }
 
-    const { 
-        fruits,setfruits, 
-        baby,setbaby, 
-        beverages,setbeverages, 
-        meats,setmeats, 
-        biscuits,setbiscuits, 
-        breads,setbreads, 
-        breaksfast,setbreaksfast, 
-        frozen,setfrozen, 
-        grocery,setgrocery, 
-        healthcare,sethealthcare, 
-        household,sethousehold,
-        lowerPrice, higherPrice
-    }  = useAppContext();
+    
+    const {fruits}:any = useAppContext();
+    const {setfruits}:any = useAppContext();
+    const {baby}:any = useAppContext();
+    const {setbaby}:any = useAppContext();
+    const {beverages}:any = useAppContext();
+    const {setbeverages}:any = useAppContext();
+    const {meats}:any = useAppContext();
+    const {setmeats}:any = useAppContext();
+    const {biscuits}:any = useAppContext();
+    const {setbiscuits}:any = useAppContext();
+    const {breads}:any = useAppContext();
+    const {setbreads}:any = useAppContext();
+    const {breaksfast}:any = useAppContext();
+    const {setbreaksfast}:any = useAppContext();
+    const {frozen}:any = useAppContext();
+    const {setfrozen}:any = useAppContext();
+    const {grocery}:any = useAppContext();
+    const {setgrocery}:any = useAppContext();
+    const {healthcare}:any = useAppContext();
+    const {sethealthcare}:any = useAppContext();
+    const {household}:any = useAppContext();
+    const {sethousehold}:any = useAppContext();
+    const {lowerPrice}:any = useAppContext();
+    const {higherPrice}:any = useAppContext();
+    // const { 
+    //     fruits,setfruits, 
+    //     baby,setbaby, 
+    //     beverages,setbeverages, 
+    //     meats,setmeats, 
+    //     biscuits,setbiscuits, 
+    //     breads,setbreads, 
+    //     breaksfast,setbreaksfast, 
+    //     frozen,setfrozen, 
+    //     grocery,setgrocery, 
+    //     healthcare,sethealthcare, 
+    //     household,sethousehold,
+    //     lowerPrice, higherPrice
+    // }  = useAppContext();
 
     const stateArr = [fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household]
-
+    const setstateArr = [setfruits, setbaby, setbeverages, setmeats, setbiscuits, setbreads, setbreaksfast, setfrozen, setgrocery, sethealthcare, sethousehold]
     const [selectFilterState, setSelectedFilterState] = useState([])
 
-    const [mappingArr, setMappingArr] = useState([])
+    const [mappingArr, setMappingArr]:any = useState([])
 
     const [isLoading, setIsLoading] = useState(false)
     const [allState, setAllState] = useState(false)
@@ -71,26 +164,49 @@ const DetailPage= () =>{
     useEffect(()=>{
         if(!fruits && !baby && !beverages && !meats && !biscuits && !breads && !breaksfast && !frozen && !grocery && !healthcare && !household){
             setMappingArr(AllData)
-        }else if(fruits && baby && beverages && meats && biscuits && breads && breaksfast && frozen && grocery && healthcare && household){
-            setMappingArr(AllData)
+            console.log('if statement')
         }
-    },[fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household])
+    })
+
+    useEffect(()=>{
+        setstateArr.map((setState)=>{
+            setState(false)
+        })
+    },[])
 
     const handleCatoState = ({stateBool, stringValue}:{
         stateBool:boolean,
         stringValue:string
         })=>{
+            stateArr.map((value)=>{
+                if(value){
+                    setCheckingCato(true)
+                }
+            })
+
             if(stateBool){
-                const filterdArr = AllData.filter((value)=>{
-                if(value.category==stringValue){
-                        return value
+                if(checkingCato){
+                    const filterdArr = AllData.filter((value)=>{
+                        if(value.category==stringValue){
+                                return value
+                            }
+                        })
+                        const afterMapping = [...mappingArr, ...filterdArr]
+                        setMappingArr(afterMapping)
+                        }
+                        else{
+                            const filterdArr = AllData.filter((value)=>{
+                            if(value.category==stringValue){
+                                    return value
+                                }
+                            })
+                            const afterMapping = [...filterdArr]
+                            
+                            setMappingArr(afterMapping)
                     }
-                })
-                const afterMapping = [...mappingArr,...filterdArr]
-                setMappingArr(afterMapping)
             }
             else{
-                const filterdArr = mappingArr.filter((value)=>{
+                const filterdArr = mappingArr.filter((value:any)=>{
                     if(value.category != stringValue){
                         return value
                     }
@@ -150,32 +266,14 @@ const DetailPage= () =>{
         const sortedData =  [...mappingArr].sort((a,b)=>{
             const date_a = new Date(a.uploaded_date)
             const date_b = new Date(b.uploaded_date)
+            return date_a.getTime() - date_b.getTime();
         })
     }
 
 
-    useEffect(()=>{
-        // if(fruits){
-        //     const fruitsArr = mappingArr.filter((value)=>{
-        //         if(value.category=='fruits'){
-        //             return value
-        //         }
-        //     })
-        //     // console.log(fruitsArr)
-        //     setMappingArr(fruitsArr)
-        // }
+    // useEffect(()=>{
 
-        // console.log(selectFilterState)
-        // stateArr.map((value)=>{
-        //     if(value){
-        //         setAllState(false)
-        //     }
-        // })
-        // if(!allState){
-        //     setMappingArr(AllData)
-        //     setAllState(true)
-        // }
-    },[fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household])
+    // },[fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household])
 
 
 
@@ -185,11 +283,11 @@ const DetailPage= () =>{
 
     return <>
             <div className="flex flex-wrap">
-                {mappingArr.map((value:any,index)=>{
-                    console.log(value)
+                {mappingArr.map((value:any,index:number)=>{
+                    // console.log(value)
                     if(value.original_price >= lowerPrice && value.original_price <= higherPrice){
                         return<div className="w-[20%] h-[420px] border" key={index}>
-                            <Link href={`detailpage/${index+1}`} className="cursor-default">
+                            <Link href={`detailpage/${value.product_id}`} className="cursor-default">
                                 <div className=" relative">
                                     <div>   
                                         <Image src={require('../../../../public/assets/images/product_1.jpg')} alt="product" />

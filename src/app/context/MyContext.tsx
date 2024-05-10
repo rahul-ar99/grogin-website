@@ -9,20 +9,20 @@ export function AppWrapper({children}:{
     children:React.ReactNode;
 }){
 
-    const [fruits, setfruits] = useState(false)
-    const [baby, setbaby] = useState(false)
-    const [beverages, setbeverages] = useState(false)
-    const [meats, setmeats] = useState(false)
-    const [biscuits, setbiscuits] = useState(false)
-    const [breads, setbreads] = useState(false)
-    const [breaksfast, setbreaksfast] = useState(false)
-    const [frozen, setfrozen] = useState(false)
-    const [grocery, setgrocery] = useState(false)
-    const [healthcare, sethealthcare] = useState(false)
-    const [household, sethousehold] = useState(false)
-    const [lowerPrice, setLowerPrice] = useState(0)
-    const [higherPrice, setHigherPrice]= useState(30)
-    const [inStock, setInStock]= useState(true)
+    const [fruits, setfruits] = useState<boolean>(false)
+    const [baby, setbaby] = useState<boolean>(false)
+    const [beverages, setbeverages] = useState<boolean>(false)
+    const [meats, setmeats] = useState<boolean>(false)
+    const [biscuits, setbiscuits] = useState<boolean>(false)
+    const [breads, setbreads] = useState<boolean>(false)
+    const [breaksfast, setbreaksfast] = useState<boolean>(false)
+    const [frozen, setfrozen] = useState<boolean>(false)
+    const [grocery, setgrocery] = useState<boolean>(false)
+    const [healthcare, sethealthcare] = useState<boolean>(false)
+    const [household, sethousehold] = useState<boolean>(false)
+    const [lowerPrice, setLowerPrice] = useState<number>(0)
+    const [higherPrice, setHigherPrice]= useState<number>(30)
+    const [inStock, setInStock]= useState<boolean>(true)
 
 
 

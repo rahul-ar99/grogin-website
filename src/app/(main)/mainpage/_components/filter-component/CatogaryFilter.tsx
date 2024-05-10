@@ -6,49 +6,43 @@ import { useRouter } from "next/navigation";
 
 export default function CatogaryFilter(){
 
-
-    interface AppContext {
-        fruits: boolean;
-        setfruits: boolean;
-        baby: boolean;
-        setbaby: boolean;
-        beverages: boolean;
-        setbeverages: boolean;
-        meats: boolean;
-        setmeats: boolean;
-        biscuits: boolean;
-        setbiscuits: boolean;
-        breads: boolean;
-        setbreads: boolean;
-        breaksfast: boolean;
-        setbreaksfast: boolean;
-        frozen: boolean;
-        setfrozen: boolean;
-        grocery: boolean;
-        setgrocery: boolean;
-        healthcare: boolean;
-        sethealthcare: boolean;
-        household: boolean;
-        sethousehold: boolean;
-        // Add more types as needed
-    }
-    const handleChangeState = (userState:any, bool:boolean)=>{
-        userState(bool)
-    }
-
-    const { fruits,setfruits, 
-            baby,setbaby, 
-            beverages,setbeverages, 
-            meats,setmeats, 
-            biscuits,setbiscuits, 
-            breads,setbreads, 
-            breaksfast,setbreaksfast, 
-            frozen,setfrozen, 
-            grocery,setgrocery, 
-            healthcare,sethealthcare, 
-            household,sethousehold,
-            // state, setState
-        } = useAppContext();
+    const {fruits}:any = useAppContext();
+    const {setfruits}:any = useAppContext();
+    const {baby}:any = useAppContext();
+    const {setbaby}:any = useAppContext();
+    const {beverages}:any = useAppContext();
+    const {setbeverages}:any = useAppContext();
+    const {meats}:any = useAppContext();
+    const {setmeats}:any = useAppContext();
+    const {biscuits}:any = useAppContext();
+    const {setbiscuits}:any = useAppContext();
+    const {breads}:any = useAppContext();
+    const {setbreads}:any = useAppContext();
+    const {breaksfast}:any = useAppContext();
+    const {setbreaksfast}:any = useAppContext();
+    const {frozen}:any = useAppContext();
+    const {setfrozen}:any = useAppContext();
+    const {grocery}:any = useAppContext();
+    const {setgrocery}:any = useAppContext();
+    const {healthcare}:any = useAppContext();
+    const {sethealthcare}:any = useAppContext();
+    const {household}:any = useAppContext();
+    const {sethousehold}:any = useAppContext();
+    const {lowerPrice}:any = useAppContext();
+    const {higherPrice}:any = useAppContext();
+    // const { fruits,setfruits, 
+    //         baby,setbaby, 
+    //         beverages,setbeverages, 
+    //         meats,setmeats, 
+    //         biscuits,setbiscuits, 
+    //         breads,setbreads, 
+    //         breaksfast,setbreaksfast, 
+    //         frozen,setfrozen, 
+    //         grocery,setgrocery, 
+    //         healthcare,sethealthcare, 
+    //         household,sethousehold,
+    //         // state, setState
+    //     } = useAppContext();
 
 
     return <>

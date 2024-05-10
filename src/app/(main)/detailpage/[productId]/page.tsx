@@ -9,7 +9,7 @@ import AllData from '../../../../../public/assets/json/addData.json'
 import React, { useEffect } from "react"
 
 
-const ProductDetailPage = ({params}:{params:{productId:string}}) =>{
+const ProductDetailPage = ({params}:{params:{productId:any}}) =>{
 
     // useEffect(()=>{
     //     console.log(params.productId)

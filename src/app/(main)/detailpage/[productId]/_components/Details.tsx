@@ -7,15 +7,15 @@ import { addToFav, removeFromFav } from "@/app/redux/favorite/page"
 import { UseDispatch, useDispatch } from "react-redux"
 import { useSelector } from "react-redux"
 import MainImage from '../../../../../../public/assets/images/stair.jpg'
-import {  SideBySideMagnifier} from 'react-image-magnifiers'
 
 
-const Detail= ({productId}:{productId:number}) =>{
+const Detail= ({productId}:{productId:any}) =>{
 
     const [zoomState, setZoomState] = useState(false)
 
      
     // userSelected is import data from json and 
+    // useEffect(()=>console.log(typeof(productId)))
     const userSelected = AllData[productId-1]
 
 
@@ -30,7 +30,7 @@ const Detail= ({productId}:{productId:number}) =>{
     const [noOfItems, setNoOfItems] = useState(1)
 
 
-    // useEffect(()=>console.log(fav, productId))
+    useEffect(()=>console.log(fav, productId))
 
 
     return(
@@ -39,13 +39,7 @@ const Detail= ({productId}:{productId:number}) =>{
                 <div className="w-full">
                     <div className="w-full relative">
                         <div className="w-full h-[500px]" >
-                        <SideBySideMagnifier
-                                imageSrc='../../../../../../public/assets/images/stair.jpg'
-                                imageAlt="Example"
-                                // largeImageSrc="./large-image.jpg" // Optional
-                                />
-                         
-                            {/* <Image className="w-full" src={require('../../../../../../public/assets/images/detail-main.jpg')} alt="banana" /> */}
+                        {/* <Image className="w-full" src={require('../../../../../../public/assets/images/detail-main.jpg')} alt="banana" /> */}
                         </div>
                         {/* <div className="w-[800px] h-[800px] absolute left-0 bg-red-500 top-0">
 
@@ -160,7 +154,8 @@ const Detail= ({productId}:{productId:number}) =>{
                     <div className="flex gap-6">
                         <div className="flex items-center gap-2">
                             <div className="w-[50px] aspect-square flex justify-center items-center border border-[#E5E7EB] rounded-xl text-2xl" onClick={()=>{
-                                fav.indexOf(parseInt(productId))==-1?dispatch(addToFav(parseInt(productId))):dispatch(removeFromFav(parseInt(productId)))
+                                const productIdInt = parseInt(productId)
+                                fav.indexOf(parseInt(productId))==-1?dispatch(addToFav(productIdInt)):dispatch(removeFromFav(parseInt(productId)))
                             }}>
                                 <i className={`fa fa-heart ${fav.indexOf(parseInt(productId))!=-1?'text-red-500':'text-black'}`}></i>
                             </div>

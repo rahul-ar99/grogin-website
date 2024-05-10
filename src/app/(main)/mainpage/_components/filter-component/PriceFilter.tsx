@@ -5,10 +5,15 @@ import { useAppContext } from "@/app/context/MyContext"
 
 const PriceFilter = () =>{
 
-    const {
-        lowerPrice, setLowerPrice,
-        higherPrice, setHigherPrice
-    } = useAppContext()
+
+    const {lowerPrice}:any = useAppContext()
+    const {setLowerPrice}:any = useAppContext()
+    const {higherPrice}:any = useAppContext()
+    const {setHigherPrice}:any = useAppContext()
+    // const {
+    //     lowerPrice, setLowerPrice,
+    //     higherPrice, setHigherPrice
+    // } = useAppContext()
 
     const [inputValue1, setInputValue1] = useState(2)
     const [inputValue2, setInputValue2] = useState(27)

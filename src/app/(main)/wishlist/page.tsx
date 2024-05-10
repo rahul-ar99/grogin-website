@@ -2,19 +2,58 @@
 
 import Image from "next/image"
 import { useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { RootState } from "@/app/redux/store/page"
+import { addToFav, removeFromFav } from "@/app/redux/favorite/page"
 import Link from "next/link"
+import { useEffect, useState } from "react"
+import AllData from '../../../../public/assets/json/addData.json'
+import Header from '@/components/includes/header/header'
+import Footer from "@/components/includes/footer/footer"
+
+
+
+interface Item {
+    id: number;
+    name: string;
+    // Other properties
+}
 
 const wishlist = ()=>{
+    const dispatch = useDispatch()
+
 
     const fav = useSelector((state:RootState)=>state.favorite.value)
 
+    const [favItems, setFavItems] = useState<Item[]>([])
+
+    const [isLoading, setIsLoading] = useState<boolean>(false)
+
+
+    const favFunction = ()=>{
+        const newFavItems = fav.map((favValue:number,index:number)=>{
+            return AllData[favValue-1]
+        })
+        setFavItems(newFavItems)
+    }
+    useEffect(()=>{
+        favFunction()
+        // console.log(favItems)
+        
+    },[fav])
+
     return <>
-    <div className="flex flex-wrap">
+    <Header />
+    <div className="wrapper">
+
+    <div className="flex flex-wrap min-h-[500px]">
         <p>{fav}</p>
-        {fav.map((value:number, index:number)=>{
+        {favItems.length !=0 ?<>
+        {favItems.map((value:any, index:number)=>{
+            console.log(value)
+            // setFavItems(AllData[value-1])
                 return <div className="w-[20%] h-[420px] border" key={index}>
-                  <Link href={`detailpage/${value}`} className="cursor-default">
+                  <Link href={`/detailpage/${value.product_id}`} className="cursor-default">
                         <div className="bg-red-400 relative">
                             <div>   
                                 <Image src={require('../../../../public/assets/images/product_1.jpg')} alt="product" />
@@ -23,18 +62,18 @@ const wishlist = ()=>{
                                 <div className="absolute top-3 right-3 z-40 cursor-pointer" onClick={(e)=>{
                                     e.preventDefault()
                                     // handleLikeClick(index)
-                                    // fav.indexOf(value)== -1?dispatch(addToFav(value)):dispatch(removeFromFav(value))
-                                    }} id="likeButton"
-                                    >
+                                    fav.indexOf(value.product_id)== -1?dispatch(addToFav(value.product_id)):dispatch(removeFromFav(value.product_id))
+                                }} id="likeButton"
+                                >
                                     {/* <i className={likes[index]?'fa fa-heart t   ext-red-500':'fa fa-heart-o z-10' } style={{fontSize: '24px'}}></i> */}
-                                    <i className={fav.indexOf(value)!=-1?'fa fa-heart text-red-500':'fa fa-heart-o z-10' } style={{fontSize: '24px'}}></i>
+                                    <i className={fav.indexOf(value.product_id)!=-1?'fa fa-heart text-red-500':'fa fa-heart-o z-10' } style={{fontSize: '24px'}}></i>
                                     
                                 </div>
 
                             </div>
                         </div>
                         <div className="pl-2">
-                            <h6 className="mb-3">Yellow Potatoes Whole Fresh, 5l`b Bag</h6>
+                            <h6 className="mb-3">{value.product_name}</h6>
                             <div className="flex gap-2">
                                 <div className="flex gap-1">
                                     <i className="fa fa-star"></i>
@@ -59,8 +98,17 @@ const wishlist = ()=>{
                      </Link>
                     </div>
         })}
+        </>:<>
+            <div className="wrapper min-h-[500px]">
+                <div className="flex justify-center items-center h-full">
+                    <p className="text-3xl font-bold capitalize">no item selected</p>
+                </div>
+            </div>
+        </>}
         
     </div>
+    </div>
+        <Footer />
 </>
 }
 
