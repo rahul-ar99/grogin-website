@@ -9,15 +9,17 @@ import { RootState } from "@/app/redux/store/page"
 
 const Related = () =>{
 
+    
+    // import redux item for wishlist
     const fav = useSelector((state:RootState)=>state.favorite.value)
-
     const dispatch = useDispatch()
 
 
-
-
-
+    // create a array for related products in single page
     const [relatedProducts, setRelatedProducts] = useState<any>([])
+
+
+    // add first 5 element in json file 
     useEffect(()=>{
         const element = []
         for (let index = 0; index < 5; index++) {
