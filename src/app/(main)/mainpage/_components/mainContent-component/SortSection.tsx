@@ -21,8 +21,8 @@ const SortSection = () =>{
                             <option value="highestPrice">Price High to Low</option>
                         </select>
                     </div>
-                    <p>|</p>
-                    <div className="flex ml-3 gap-10 items-center">
+                    <p className="max-[480px]:hidden">|</p>
+                    <div className="flex ml-3 gap-10 items-center max-[480px]:hidden">
                         <p>Show: 20 items</p>
                         <div className="flex gap-2">
                             <button className="w-[40px] aspect-square bg-gray-300 flex justify-center items-center rounded-lg ">

@@ -10,10 +10,12 @@ import { useAppContext } from "@/app/context/MyContext"
 
 const Mainpage = () =>{
 
+
+
     return <div className="w-full">
                 <Header />
                 <div className="wrapper">
-                    <div className="w-full flex gap-12 pb-16">
+                    <div className="w-full flex gap-12 pb-16 max-[1080px]:text-sm max-[980px]:flex-col">
                         <Filter />
                         <MainContent />
                     </div>

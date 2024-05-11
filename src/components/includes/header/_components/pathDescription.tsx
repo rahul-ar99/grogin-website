@@ -1,4 +1,3 @@
-'use client'
 
 import {useSelector } from "react-redux"
 import { RootState } from "@/app/redux/store/page"
@@ -13,7 +12,7 @@ const PathDescription = () =>{
 
     return <div className="w-full">
         <div className="wrapper">
-            <div className="w-full py-3 text-black flex gap-4">
+            <div className="w-full py-3 text-black flex gap-4 max-[640px]:text-sm">
                 {/* <p>{fav}</p> */}
                 <p className="text-gray-500">Home {'>'}</p>
                 <span>Shop</span>

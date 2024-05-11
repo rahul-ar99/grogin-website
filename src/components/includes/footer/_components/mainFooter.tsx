@@ -11,7 +11,7 @@ const MainFooter = () =>{
     return <div className="w-full">
             <div className="wrapper">
                 <div className="flex justify-between text-base py-12 border-b">
-                    <div className="w-[20%] flex flex-col gap-2">
+                    <div className="w-[20%] flex flex-col gap-2 max-[980px]:w-[50%] max-[980px]:text-sm">
                         <h6 className="text-xl font-semibold text-black">Do You Need Help?</h6>
                         <p>Autoseligen syr. Nek diarask fröbomba. Nörantipol kynoda nynat. Pressa fåmoska.</p>
                         <div className="flex flex-col gap-5 mt-4">
@@ -35,7 +35,7 @@ const MainFooter = () =>{
                             </div>
                         </div>
                     </div>
-                    <div className="w-[20%] flex flex-col gap-2">
+                    <div className="w-[20%] flex flex-col gap-2 max-[980px]:hidden">
                         <h6 className="text-xl font-semibold text-black">Make Money with Us</h6>
                         <a href="">sell on Grogin</a>
                         <a href="">Sell Your Service on Grogin</a>
@@ -46,7 +46,7 @@ const MainFooter = () =>{
                         <a href="">Sell-Publish with Us </a>
                         <a href="">Become an Blowwe Vendor</a>
                     </div>
-                    <div className="w-[20%] flex flex-col gap-2">
+                    <div className="w-[20%] flex flex-col gap-2 max-[980px]:hidden">
                         <h6 className="text-xl font-semibold text-black">Let Us Help You</h6>
                         <a href="">Accessibility Statement </a>
                         <a href="">Your Orders </a>
@@ -58,7 +58,7 @@ const MainFooter = () =>{
                         <a href="">Cookie Settings </a>
                         <a href="">Help Center</a>
                     </div>
-                    <div className="w-[20%] flex flex-col gap-2">
+                    <div className="w-[20%] flex flex-col gap-2 max-[980px]:hidden">
                         <h6 className="text-xl font-semibold text-black">Get to Know Us</h6>
                         <a href="">Career for Grogin </a>
                         <a href="">About Grogin </a>
@@ -68,7 +68,7 @@ const MainFooter = () =>{
                         <a href="">Social Responsibility </a>
                         <a href="">Store Locations</a>
                     </div>
-                    <div className="w-[20%] flex flex-col gap-2">
+                    <div className="w-[20%] flex flex-col gap-2  max-[980px]:w-[50%] max-[980px]:text-sm">
                         <h6 className="text-xl font-semibold text-black">Download our App </h6>
                         <div className="flex">
                             <div>

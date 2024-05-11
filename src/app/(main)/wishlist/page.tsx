@@ -58,7 +58,7 @@ const wishlist = ()=>{
         {favItems.map((value:any, index:number)=>{
             if(value!=undefined){
 
-            return <div className="w-[20%] h-[420px] border" key={index}>
+            return <div className="w-[20%] border max-[768px]:w-[25%] max-[640px]:w-[33%] py-3 max-[540px]:w-[50%] max-[420px]:w-full" key={index}>
                   <Link href={`/detailpage/${value.product_id}`} className="cursor-default">
                         <div className=" relative">
                             <div>   

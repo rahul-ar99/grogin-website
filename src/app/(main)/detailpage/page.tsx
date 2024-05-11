@@ -215,7 +215,7 @@ const DetailPage= () =>{
                     console.log(imageName)
                     // console.log(value)
                     if(value.original_price >= lowerPrice && value.original_price <= higherPrice){
-                        return<div className="w-[20%] h-[420px] border" key={index}>
+                        return<div className="w-[20%] border max-[768px]:w-[25%] max-[640px]:w-[33%] py-3 max-[540px]:w-[50%] max-[420px]:w-full" key={index}>
                             <Link href={`detailpage/${value.product_id}`} className="cursor-default">
                                 <div className=" relative">
                                     <div>   
@@ -232,31 +232,31 @@ const DetailPage= () =>{
                                             <i className={fav.indexOf(value.product_id)!=-1?'fa fa-heart text-red-500':'fa fa-heart-o z-10' } style={{fontSize: '24px'}}></i>
                                         </div>
                                         <div className="absolute left-1 top-2">
-                                            <p className="bg-red-500 w-min  py-[2px] pl-1 pr-2 rounded-xl text-sm font-bold text-white">{value.discount}%</p>
+                                            <p className="bg-red-500 w-min  py-[2px] pl-1 pr-2 rounded-xl text-sm max-[1080px]:text-xs font-bold text-white">{value.discount}%</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="pl-2">
-                                    <h6 className="mb-3">{value.product_name}</h6>
+                                    <h6 className="mb-3 max-[1080px]:text-sm">{value.product_name}</h6>
                                     <div className="flex gap-2">
-                                        <div className="flex gap-1">
+                                        <div className="flex gap-1 max-[1080px]:text-xs">
                                             <i className={value.rating<=0?`fa fa-star-o`:'fa fa-star'}></i>
                                             <i className={value.rating<=1?`fa fa-star-o`:'fa fa-star'}></i>
                                             <i className={value.rating<=2?`fa fa-star-o`:'fa fa-star'}></i>
                                             <i className={value.rating<=3?`fa fa-star-o`:'fa fa-star'}></i>
                                             <i className={value.rating<=4?`fa fa-star-o`:'fa fa-star'}></i>
                                         </div>
-                                        <p>{value.no_of_person_reviewed}</p>
+                                        <p className="max-[1080px]:text-xs">{value.no_of_person_reviewed}</p>
                                     </div>
-                                    <div className="flex gap-3 items-center my-3">
-                                        <p className="text-2xl text-[#DC2626] font-bold">${parseFloat((value.original_price-(value.original_price*value.discount/100)).toFixed(2))} </p>
-                                        <span className="text-xl"><del>${value.original_price}</del> </span>
+                                    <div className="flex gap-3 items-center my-3 ">
+                                        <p className="text-2xl text-[#DC2626] font-bold max-[1080px]:text-lg">${parseFloat((value.original_price-(value.original_price*value.discount/100)).toFixed(2))} </p>
+                                        <span className="text-xl max-[1080px]:text-sm"><del>${value.original_price}</del> </span>
                                     </div>
                                     <div className="flex items-center gap-3">
-                                        <div className={`flex w-[40px] aspect-square justify-center items-center ${value.in_stock?'bg-[#16A34A]':'bg-red-500'} rounded-xl`}>
-                                            <i className="fa fa-shopping-cart text-white"></i>
+                                        <div className={`flex w-[40px] aspect-square max-[980px]:text-sm max-[1080px]:w-[30px] justify-center items-center ${value.in_stock?'bg-[#16A34A]':'bg-red-500'} rounded-xl`}>
+                                            <i className="fa fa-shopping-cart text-white "></i>
                                         </div>
-                                        <p>{value.in_stock?'IN STOCK':'OUT OF STOCK'}</p>
+                                        <p className="max-[1080px]:text-xs">{value.in_stock?'IN STOCK':'OUT OF STOCK'}</p>
                                     </div>
                                 </div>
                              </Link>

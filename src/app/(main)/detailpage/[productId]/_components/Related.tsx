@@ -30,9 +30,9 @@ const Related = () =>{
 
     return <>
                 <h4 className="text-2xl font-bold mb-4">Related Products</h4>
-                <div className="flex flex-wrap">
+                <div className="flex flex-wrap ">
                     {relatedProducts.map((value:any,index:number)=>{
-                            return <div className="w-[20%] border" key={index}>
+                            return <div className="w-[20%] border max-[768px]:w-[25%] max-[640px]:w-[33%] py-3 max-[540px]:w-[50%] max-[420px]:w-full" key={index}>
                             <Link href={`/detailpage/${index+1}`}>
                                     <div className="relative">
                                         <div>   

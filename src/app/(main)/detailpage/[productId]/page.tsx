@@ -18,7 +18,7 @@ const ProductDetailPage = ({params}:{params:{productId:any}}) =>{
     return <div>
                 <Header />
                 <div className="wrapper">
-                    <p>this is product Detail page {params.productId}</p>
+                    {/* <p>this is product Detail page {params.productId}</p> */}
                     <Detail productId={params.productId} />
                     <Description productId={params.productId} />
                     <Related />
