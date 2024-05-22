@@ -15,7 +15,8 @@
     "react-dom": "^18",
     "react-image-magnifiers": "^1.4.0",
     "react-image-magnify": "^2.7.4",
-    "react-redux": "^9.1.2"
+    "react-redux": "^9.1.2",
+    "sweetalert2": "^11.11.0"
   },
   "devDependencies": {
     "@types/node": "^20",

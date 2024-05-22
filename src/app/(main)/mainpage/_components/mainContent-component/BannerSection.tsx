@@ -5,7 +5,7 @@ import banner from '../../../../../../public/assets/images/banner.jpg'
 const BannerSection = () =>{
     return  <div>
                 <div className="relative">
-                    <div className="rounded-xl overflow-hidden max-[1080px]:h-[300px]">
+                    <div className="rounded-xl overflow-hidden max-1280:h-[300px] max-480:h-[350px]">
                         <Image src={banner} alt="banner" className="h-full"/>
                     </div>
                     <div className="absolute top-10 left-10">

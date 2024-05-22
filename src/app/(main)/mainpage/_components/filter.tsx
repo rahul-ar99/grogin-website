@@ -10,9 +10,9 @@ const Filter = () =>{
 
     const [filterState, setFilterState] = useState<boolean>(false)
 
-    return <div className="w-min relative">
-        <button className={`hidden max-[980px]:flex text:2xl max-[980px]:text-sm`} onClick={()=>setFilterState(!filterState)}>Filter</button>
-        <div className={`max-[980px]:absolute top-10 left-0 z-10 max-[980px]:bg-white max-[980px]:border rounded-xl max-[980px]:bg-slate-100 ${filterState?'max-[980px]:flex-col':'max-[980px]:hidden'}`}>
+    return <div className="w-min relative z-10 ">
+        <button className={`hidden max-1080:flex text:2xl max-[980px]:text-sm `} onClick={()=>setFilterState(!filterState)}>Filter</button>
+        <div className={`max-1080:absolute max-1080:hidden max-1080:bg-white top-10 left-0 z-10 max-[980px]:bg-white max-[980px]:border rounded-xl max-[980px]:bg-slate-100 ${filterState?'max-[980px]:flex-col':'max-[980px]:hidden'}`}>
             <PriceFilter />
             <CatogaryFilter />
             <ColorFilter />

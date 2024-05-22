@@ -10,7 +10,7 @@ const ProductStatus = () =>{
                     </div>
                     <div className="flex gap-3">
                         <input type="checkbox" id="onsale"/>
-                        <label htmlFor="onsale">On Sale</label>
+                        <label htmlFor="onsale">Out of Stock</label>
                     </div>
                 </div>
             </div>

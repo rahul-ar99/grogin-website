@@ -58,7 +58,7 @@ const wishlist = ()=>{
         {favItems.map((value:any, index:number)=>{
             if(value!=undefined){
 
-            return <div className="w-[20%] border max-[768px]:w-[25%] max-[640px]:w-[33%] py-3 max-[540px]:w-[50%] max-[420px]:w-full" key={index}>
+            return <div className="w-[20%] border max-98-:w-[25%] max-786:w-[33%] py-3 max-640:w-[50%] max-[420px]:w-full" key={index}>
                   <Link href={`/detailpage/${value.product_id}`} className="cursor-default">
                         <div className=" relative">
                             <div>   
@@ -79,7 +79,7 @@ const wishlist = ()=>{
                             </div>
                         </div>
                         <div className="pl-2">
-                            <h6 className="mb-3">{value.product_name}</h6>
+                            <h6 className="mb-3 h-10">{value.product_name}</h6>
                             <div className="flex gap-2">
                                 <div className="flex gap-1">
                                     <i className="fa fa-star"></i>

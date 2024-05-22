@@ -215,11 +215,11 @@ const DetailPage= () =>{
                     console.log(imageName)
                     // console.log(value)
                     if(value.original_price >= lowerPrice && value.original_price <= higherPrice){
-                        return<div className="w-[20%] border max-[768px]:w-[25%] max-[640px]:w-[33%] py-3 max-[540px]:w-[50%] max-[420px]:w-full" key={index}>
+                        return<div className="w-[20%] border max-786:w-[25%] max-640:w-[33%] py-3 max-480:w-[50%]" key={index}>
                             <Link href={`detailpage/${value.product_id}`} className="cursor-default">
                                 <div className=" relative">
-                                    <div>   
-                                        <Image src={require(`../../../../public/assets/images/products/images_${(value.product_id%16)+1}.png`)} alt="product" />
+                                    <div className="max-h-[300px]">   
+                                        <Image className="max-h-[90%]" src={require(`../../../../public/assets/images/products/${(value.category +(value.product_id%16))}.png`)} alt="product" />
                                     </div>
                                     <div>
                                         <div className="absolute top-3 right-3 z-40 cursor-pointer" onClick={(e)=>{
@@ -237,30 +237,30 @@ const DetailPage= () =>{
                                     </div>
                                 </div>
                                 <div className="pl-2">
-                                    <h6 className="mb-3 max-[1080px]:text-sm">{value.product_name}</h6>
-                                    <div className="flex gap-2">
-                                        <div className="flex gap-1 max-[1080px]:text-xs">
+                                    <h6 className="mb-3 max-[1080px]:text-sm h-10">{value.product_name}</h6>
+                                    <div className="flex gap-2 items-center">
+                                        <div className="flex gap-1 max-[1080px]:text-xs max-1080:text-sm">
                                             <i className={value.rating<=0?`fa fa-star-o`:'fa fa-star'}></i>
                                             <i className={value.rating<=1?`fa fa-star-o`:'fa fa-star'}></i>
                                             <i className={value.rating<=2?`fa fa-star-o`:'fa fa-star'}></i>
                                             <i className={value.rating<=3?`fa fa-star-o`:'fa fa-star'}></i>
                                             <i className={value.rating<=4?`fa fa-star-o`:'fa fa-star'}></i>
                                         </div>
-                                        <p className="max-[1080px]:text-xs">{value.no_of_person_reviewed}</p>
+                                        <p className="max-1080:text-xs">{value.no_of_person_reviewed}</p>
                                     </div>
-                                    <div className="flex gap-3 items-center my-3 ">
-                                        <p className="text-2xl text-[#DC2626] font-bold max-[1080px]:text-lg">${parseFloat((value.original_price-(value.original_price*value.discount/100)).toFixed(2))} </p>
-                                        <span className="text-xl max-[1080px]:text-sm"><del>${value.original_price}</del> </span>
+                                    <div className="flex gap-3 items-center my-3 max-980:text-sm">
+                                        <p className="text-2xl text-[#DC2626] font-bold max-1080:text-lg">${parseFloat((value.original_price-(value.original_price*value.discount/100)).toFixed(2))} </p>
+                                        <span className="text-xl max-[1080px]:text-sm  max-1080:text-lg"><del>${value.original_price}</del> </span>
                                     </div>
                                     <div className="flex items-center gap-3">
-                                        <div className={`flex w-[40px] aspect-square max-[980px]:text-sm max-[1080px]:w-[30px] justify-center items-center ${value.in_stock?'bg-[#16A34A]':'bg-red-500'} rounded-xl`}>
+                                        <div className={`flex w-[40px] aspect-square max-[980px]:text-sm max-1280:w-[35px] justify-center items-center max-980:w-[30px] max-980:text-sm ${value.in_stock?'bg-[#16A34A]':'bg-red-500'} rounded-xl`}>
                                             <i className="fa fa-shopping-cart text-white "></i>
                                         </div>
-                                        <p className="max-[1080px]:text-xs">{value.in_stock?'IN STOCK':'OUT OF STOCK'}</p>
+                                        <p className="max-[1080px]:text-xs  max-1280:text-sm">{value.in_stock?'IN STOCK':'OUT OF STOCK'}</p>
                                     </div>
                                 </div>
-                             </Link>
-                            </div>
+                            </Link>
+                        </div>
                 
             }
             return undefined

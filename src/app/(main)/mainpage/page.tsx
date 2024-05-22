@@ -15,7 +15,7 @@ const Mainpage = () =>{
     return <div className="w-full">
                 <Header />
                 <div className="wrapper">
-                    <div className="w-full flex gap-12 pb-16 max-[1080px]:text-sm max-[980px]:flex-col">
+                    <div className="w-full flex gap-12 max-1080:gap-0 pb-16 max-[1080px]:text-sm max-1080:flex-col">
                         <Filter />
                         <MainContent />
                     </div>

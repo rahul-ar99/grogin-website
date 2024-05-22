@@ -35,13 +35,13 @@ const Description = ({productId}:{productId:number}) =>{
     const [descState, setDescState] = useState(true)
 
 
-    return <div className="py-20">
-                    <div className="flex gap-7 mb-5 border-b-2 border-b-[#E5E7EB]   ">
-                    <p className={`py-4 text-lg cursor-pointer ${descState?'border-b-2 border-[#030712]':''}`} onClick={()=>setDescState(true)}>Description</p>
-                    <p className={`py-4 text-lg cursor-pointer ${!descState?'border-b-2 border-[#030712]':''}`} onClick={()=>setDescState(false)}>Reviews {'(2)'}</p>
+    return <div className="py-20 max-980:py-14 max-640:py-10">
+                    <div className="flex gap-7 mb-5 border-b-2 border-b-[#E5E7EB] ">
+                    <p className={`py-4 text-lg cursor-pointer ${descState?'border-b-2 border-[#030712]':''}   max-640:text-base  max-640:py-2`} onClick={()=>setDescState(true)}>Description</p>
+                    <p className={`py-4 text-lg cursor-pointer ${!descState?'border-b-2 border-[#030712]':''}  max-640:text-base max-640:py-2`} onClick={()=>setDescState(false)}>Reviews {'(2)'}</p>
                 </div>
                 {descState ?
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-4 max-640:text-sm">
                         <p>Quisque varius diam vel metus mattis, id aliquam diam rhoncus. Proin vitae magna in dui finibus malesuada et at nulla. Morbi elit ex, viverra vitae ante vel, blandit feugiat ligula. Fusce fermentum iaculis nibh, at sodales leo maximus a. Nullam ultricies sodales nunc, in pellentesque lorem mattis quis. Cras imperdiet est in nunc tristique lacinia. Nullam aliquam mauris eu accumsan tincidunt. Suspendisse velit ex, aliquet vel ornare vel, dignissim a tortor.</p>
                         <p>Morbi ut sapien vitae odio accumsan gravida. Morbi vitae erat auctor, eleifend nunc a, lobortis neque. Praesent aliquam dignissim viverra. Maecenas lacus odio, feugiat eu nunc sit amet, maximus sagittis dolor. Vivamus nisi sapien, elementum sit amet eros sit amet, ultricies cursus ipsum. Sed consequat luctus ligula. Curabitur laoreet rhoncus blandit. Aenean vel diam ut arcu pharetra dignissim ut sed leo. Vivamus faucibus, ipsum in vestibulum vulputate, lorem orci convallis quam, sit amet consequat nulla felis pharetra lacus. Duis semper erat mauris, sed egestas purus commodo vel</p>
                     </div> 
@@ -50,12 +50,12 @@ const Description = ({productId}:{productId:number}) =>{
                         {
                             userSelected.reviews.map((value:any, index:number)=>{
                                 return <div className="flex gap-5 mb-3" key={index}>
-                                                <div className="w-[50px]">
+                                                <div className="w-[50px] max-640:w-[35px]">
                                                     <Image src={userImg} alt="userImage" />
                                                 </div>
                                                 <div>
-                                                    <p className="font-semibold">{value.name}</p>
-                                                    <p>{value.review}</p>
+                                                    <p className="font-semibold max-640:text-sm">{value.name}</p>
+                                                    <p className="max-640:text-xs">{value.review}</p>
                                                 </div>
                                             </div>
                             })

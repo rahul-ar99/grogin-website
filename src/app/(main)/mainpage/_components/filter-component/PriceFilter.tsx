@@ -64,18 +64,13 @@ const PriceFilter = () =>{
                         </div>
                     </div>
                 </div>
-                <div id="slider" className="h-2 rounded-md bg-slate-500 relative">
+                <div id="slider" className="h-2 mt-4 rounded-md bg-slate-500 relative">
                     <div id="progress" className={`h-2 left-[${inputPercentage}%] right-[25%] absolute rounded-md bg-sky-600 z-30`}></div>
                 </div>
                 <div className="relative">
                     <input type="range" id="range-min" className="w-full absolute top-[-8px] h-2  input-slider" min={0} value={inputValue1} max={30} onChange={(e)=>input1Fun(parseInt(e.target.value))} />
-                    <input type="range" id="range-max" className="w-full absolute top-[8px] h-2  input-slider" min={0} value={inputValue2} max={30} onChange={(e)=>input2Fun(parseInt(e.target.value))} />
+                    <input type="range" id="range-max" className="w-full absolute top-[-8px] h-2  input-slider" min={0} value={inputValue2} max={30} onChange={(e)=>input2Fun(parseInt(e.target.value))} />
                 </div>
-
-               
-
-
-                
                 <div className="flex justify-between items-center mt-10">
                     <p>Price: ${lowerPrice} - ${higherPrice}</p>
                     <button className="py-2 px-3 bg-[#E5E7EB] rounded-md hover:bg-[#c7c9cc]" onClick={handleChangeInput}>Filter</button>
