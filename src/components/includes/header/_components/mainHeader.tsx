@@ -18,7 +18,7 @@ const MainHeader = () =>{
             <div className="flex justify-between max-w-full py-7 max-1280:py-4 max-[980px]:py-3 max-[540px]:flex-col gap-y-6 items-center">
                 <div className="flex gap-10 max-[540px]:w-full max-[540px]:justify-between">
                     <h1 className="">
-                        <a href="">
+                        <a href="/mainpage">
                             <Image  
                                     src={logo}
                                     // width={100}

@@ -22,7 +22,7 @@ export function AppWrapper({children}:{
     const [household, sethousehold] = useState<boolean>(false)
     const [lowerPrice, setLowerPrice] = useState<number>(0)
     const [higherPrice, setHigherPrice]= useState<number>(30)
-    const [inStock, setInStock]= useState<boolean>(true)
+    const [inStock, setInStock]= useState<boolean>(false)
     const [sortState, setSortState] = useState<string>('')
 
 
@@ -44,8 +44,9 @@ export function AppWrapper({children}:{
             household, sethousehold,
             lowerPrice, setLowerPrice,
             higherPrice, setHigherPrice,
-            sortState, setSortState
-            }}>
+            sortState, setSortState,
+            inStock, setInStock
+        }}>
             {children}
         </AppContext.Provider>
     )

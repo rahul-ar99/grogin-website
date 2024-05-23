@@ -10,6 +10,15 @@ import { useSelector } from "react-redux"
 import AllData from '../../../../public/assets/json/addData.json'
 import { useAppContext } from "@/app/context/MyContext"
 
+interface ImageMagnifierProps {
+    smallImageSrc: string;
+    largeImageSrc: string;
+    smallImageAlt?: string;
+    smallImageWidth: number;
+    smallImageHeight: number;
+    largeImageWidth: number;
+    largeImageHeight: number;
+  }
 
 
 const DetailPage= () =>{
@@ -25,15 +34,16 @@ const DetailPage= () =>{
 
     const [likes, setLikes] = useState<boolean[]>(Array(16).fill(false))
 
+    
     const [checkingCato, setCheckingCato] = useState(false)
-
+    
     // like icon color change
     const handleLikeClick = (index:number) => {
         const updatedLikes = [...likes];
         updatedLikes[index] = !updatedLikes[index];
         setLikes(updatedLikes);
     }
-
+    
     
     const {fruits}:any = useAppContext();
     const {setfruits}:any = useAppContext();
@@ -59,16 +69,18 @@ const DetailPage= () =>{
     const {sethousehold}:any = useAppContext();
     const {lowerPrice}:any = useAppContext();
     const {higherPrice}:any = useAppContext();
-    const {sortState}:any = useAppContext()
-
+    const {sortState}:any = useAppContext();
+    const {inStock}:any = useAppContext();
+    const {setInStock}:any = useAppContext()
+    
     useEffect(()=>console.log(sortState),[sortState])
-
+    
     // const stateArr = [fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household]
     const setstateArr = [setfruits, setbaby, setbeverages, setmeats, setbiscuits, setbreads, setbreaksfast, setfrozen, setgrocery, sethealthcare, sethousehold]
-
+    
     const [mappingArr, setMappingArr]:any = useState([])
-
-
+    
+    const [beforeIsStock, setBeforeIsStock]:any = useState([])
 
 
 
@@ -122,8 +134,9 @@ const DetailPage= () =>{
                     setMappingArr(filterdArr)
 
                 // }
+            }
+            setInStock(false)
     }
-}
 
     useEffect(()=>{
         console.log(lowerPrice, higherPrice)
@@ -167,7 +180,25 @@ const DetailPage= () =>{
     useEffect(()=>{
         handleCatoState({stateBool:household,stringValue:'household'})
     },[household])
+    // 
+    useEffect(()=>{
+        if(inStock){
+            const isStockArr = mappingArr.filter((value:any)=>{
+                if(value.in_stock){
+                    return value
+                }
+            })
+            setBeforeIsStock(mappingArr)
+            setMappingArr(isStockArr)
+        }
+        else{
+            setMappingArr(beforeIsStock)
+        }
+        // handleCatoState({stateBool:household,stringValue:'household'})
 
+        // console.log(inStock, 'stock')
+        // handleStock()
+    },[inStock])
 
 
     // sort
@@ -208,17 +239,20 @@ const DetailPage= () =>{
    
     },[fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household])
 
+
+    
+
     return <>
             <div className="flex flex-wrap">
                 {mappingArr.map((value:any,index:number)=>{
                     const imageName = value.product_id % 16
-                    console.log(imageName)
+                    // console.log(imageName)
                     // console.log(value)
                     if(value.original_price >= lowerPrice && value.original_price <= higherPrice){
                         return<div className="w-[20%] border max-786:w-[25%] max-640:w-[33%] py-3 max-480:w-[50%]" key={index}>
                             <Link href={`detailpage/${value.product_id}`} className="cursor-default">
                                 <div className=" relative">
-                                    <div className="max-h-[300px]">   
+                                    <div className="max-h-[300px] min-h-[300px] overflow-hidden">   
                                         <Image className="max-h-[90%]" src={require(`../../../../public/assets/images/products/${(value.category +(value.product_id%16))}.png`)} alt="product" />
                                     </div>
                                     <div>

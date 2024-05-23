@@ -32,6 +32,8 @@ export default function SelectedFilter(){
     const {sethousehold}:any = useAppContext();
     const {lowerPrice}:any = useAppContext();
     const {higherPrice}:any = useAppContext();
+    const {inStock}:any = useAppContext();
+    const {setInStock}:any = useAppContext();
     // const { fruits,setfruits, 
     //         baby,setbaby, 
     //         beverages,setbeverages, 
@@ -46,9 +48,9 @@ export default function SelectedFilter(){
     //         // state,setState
     //     }  = useAppContext();
 
-    const stateArr = [fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household]
-    const setStateArr = [setfruits, setbaby, setbeverages, setmeats, setbiscuits, setbreads, setbreaksfast, setfrozen, setgrocery, sethealthcare, sethousehold]
-    const stringArr = ['Fruits & Vegitables', 'Baby & Pregnancy', 'Beverages', 'Meats & Seafoods', 'Biscuits & Snacks', 'Breads & Bakery', 'Breaksfast & Dairy', 'Frozen Foods', 'Grocery & Staples', 'Healthcare', 'Household Needs']
+    const stateArr = [fruits, baby, beverages, meats, biscuits, breads, breaksfast, frozen, grocery, healthcare, household , inStock]
+    const setStateArr = [setfruits, setbaby, setbeverages, setmeats, setbiscuits, setbreads, setbreaksfast, setfrozen, setgrocery, sethealthcare, sethousehold, setInStock]
+    const stringArr = ['Fruits & Vegitables', 'Baby & Pregnancy', 'Beverages', 'Meats & Seafoods', 'Biscuits & Snacks', 'Breads & Bakery', 'Breaksfast & Dairy', 'Frozen Foods', 'Grocery & Staples', 'Healthcare', 'Household Needs', 'in Stock']
 
 
 
