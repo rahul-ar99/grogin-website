@@ -1,3 +1,5 @@
+'use client'
+
 import { useAppContext } from "@/app/context/MyContext"
 import { useEffect } from "react"
 

@@ -252,7 +252,7 @@ const DetailPage= () =>{
                         return<div className="w-[20%] border max-786:w-[25%] max-640:w-[33%] py-3 max-480:w-[50%]" key={index}>
                             <Link href={`detailpage/${value.product_id}`} className="cursor-default">
                                 <div className=" relative">
-                                    <div className="max-h-[300px] min-h-[300px] overflow-hidden">   
+                                    <div className="max-h-[300px] min-h-[300px] max-1280:min-h-[200px]  overflow-hidden flex items-center">   
                                         <Image className="max-h-[90%]" src={require(`../../../../public/assets/images/products/${(value.category +(value.product_id%16))}.png`)} alt="product" />
                                     </div>
                                     <div>

@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 
 import Header from "@/components/includes/header/header"
 import Footer from "@/components/includes/footer/footer"
@@ -6,6 +6,13 @@ import Filter from "./_components/filter"
 import MainContent from "./_components/mainContent"
 import { useEffect, useState } from "react"
 import { useAppContext } from "@/app/context/MyContext"
+import { Metadata } from "next"
+
+
+export const metadata: Metadata = {
+    title: 'Grogin | main page',
+    description: 'this is grogin site main page',
+  }
 
 
 const Mainpage = () =>{

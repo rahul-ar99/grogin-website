@@ -7,17 +7,9 @@ import { addToFav, removeFromFav } from "@/app/redux/favorite/page"
 import { UseDispatch, useDispatch } from "react-redux"
 import { useSelector } from "react-redux"
 import MainImage from '../../../../../../public/assets/images/stair.jpg'
-import ImageMagnifier from "./ImageMagnifier"
+import Magnifier from "./ImageZoom"
 import Swal from "sweetalert2"
-import ReactImageMagnify from 'react-image-magnify';
-import {
-    Magnifier,
-    GlassMagnifier,
-    SideBySideMagnifier,
-    PictureInPictureMagnifier,
-    MOUSE_ACTIVATION,
-    TOUCH_ACTIVATION
-  } from "react-image-magnifiers";
+
 
 
 const Detail= ({productId}:{productId:number}) =>{
@@ -135,27 +127,35 @@ const Detail= ({productId}:{productId:number}) =>{
         {
             isLoading ?<div className="flex justify-between py-5 max-1080:flex-col">
             <div className="min-w-[50%]">
-                <div className="w-full">
+                <div className="w-full h-[500px] max-1080:h-auto">
                     <div className="w-full relative">
                         <div className="w-full">
-                    
-                            <SideBySideMagnifier
-                                imageSrc={"../stair.jpg"}
-                                largeImageSrc="../stair.jpg"
-                                alwaysInPlace={false}
-                                switchSides={false}
-                                fillAvailableSpace={false}
-                                fillAlignTop={true}
-                                fillGapLeft={10}
-                                fillGapRight={10}
-                                fillGapTop={10}
-                                fillGapBottom={10}
-                                zoomContainerBorder="1px solid #d4d4d4"
-                                zoomContainerBoxShadow="0 4px 8px rgba(0,0,0,.5)"
-                                overlayOpacity={0.6}
-                                overlayBoxOpacity={0.8}
-                            />
-                            {/* <Image className="w-full" src={require(`../../../../../../public/assets/images/products/${userSelected.category+(productId%16)}.png`)} alt="itemImage" /> */}
+                            <div className="w-full  flex justify-center max-1280:hidden">
+                                <Magnifier
+                                    src={`/assets/images/products/${userSelected.category+((productId%16)+1)}.png`}
+                                    width={500}
+                                    height={500}
+                                    leftAbsolute={600}
+                                    magnifierHeight={600}
+                                    magnifierWidth={600}
+                                    zoomLevel={3}
+                                />
+                            </div>
+                            <div className="w-full  hidden max-1280:flex justify-center max-1080:hidden">
+                                <Magnifier
+                                    src={`/assets/images/products/${userSelected.category+((productId%16)+1)}.png`}
+                                    width={500}
+                                    height={500}
+                                    leftAbsolute={500}
+                                    magnifierHeight={500}
+                                    magnifierWidth={500}
+                                    zoomLevel={3}
+                                />
+                            </div>
+                            <div className="w-full justify-center hidden max-1080:flex">
+                                <Image className="w-full" src={require(`../../../../../../public/assets/images/products/${userSelected.category+((productId%16)+1)}.png`)} alt="itemImage" />
+
+                            </div>
                         </div>
                         <div className="absolute top-2 left-2">
                             <p className="bg-red-500 text-white font-semibold rounded-3xl text-xs w-min py-1 px-2 mb-2">{userSelected.discount}%</p>

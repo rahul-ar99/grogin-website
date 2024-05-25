@@ -1,3 +1,5 @@
+'use client'
+
 import ProductStatus from "./filter-component/ProductStatus"
 import BrandFilter from "./filter-component/BrandFilter"
 import ColorFilter from "./filter-component/ColorFilter"

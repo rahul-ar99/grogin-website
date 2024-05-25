@@ -10,6 +10,7 @@ import { useEffect, useState } from "react"
 import AllData from '../../../../public/assets/json/addData.json'
 import Header from '@/components/includes/header/header'
 import Footer from "@/components/includes/footer/footer"
+import { SideBySideMagnifier } from "react-image-magnifiers"
 
 
 
@@ -20,6 +21,9 @@ interface Item {
 }
 
 const wishlist = ()=>{
+
+    const stairImage = './stair.jpg'
+
     const dispatch = useDispatch()
 
 
@@ -53,6 +57,26 @@ const wishlist = ()=>{
     <Header />
     <div className="wrapper">
         <h3 className="text-3xl font-bold">WishList</h3>
+        <div className="w-[50%]">
+            <Image className="example-3" src={require('./stair.jpg')} alt="asdf" />
+{/*         
+        <SideBySideMagnifier
+                                imageSrc={"./stair.jpg"}
+                                largeImageSrc="./stair.jpg"
+                                alwaysInPlace={false}
+                                switchSides={false}
+                                fillAvailableSpace={false}
+                                fillAlignTop={true}
+                                fillGapLeft={10}
+                                fillGapRight={10}
+                                fillGapTop={10}
+                                fillGapBottom={10}
+                                zoomContainerBorder="1px solid #d4d4d4"
+                                zoomContainerBoxShadow="0 4px 8px rgba(0,0,0,.5)"
+                                overlayOpacity={0.6}
+                                overlayBoxOpacity={0.8}
+                            /> */}
+        </div>
     <div className="flex flex-wrap min-h-[500px]">
         {favItems.length !=0 ?<>
         {favItems.map((value:any, index:number)=>{
@@ -62,7 +86,7 @@ const wishlist = ()=>{
                   <Link href={`/detailpage/${value.product_id}`} className="cursor-default">
                         <div className=" relative">
                             <div>   
-                                <Image src={require(`../../../../public/assets/images/products/images_${(value.product_id%16)+1}.png`)} alt="product" />
+                                <Image className="example-3" src={require(`../../../../public/assets/images/products/images_${(value.product_id%16)+1}.png`)} alt="product" />
                             </div>
                             <div>
                                 <div className="absolute top-3 right-3 z-40 cursor-pointer" onClick={(e)=>{
