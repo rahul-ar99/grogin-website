@@ -1,3 +1,4 @@
+'use client'
 
 import Image from "next/image"
 import AllData from '../../../../../../public/assets/json/addData.json'
@@ -132,7 +133,7 @@ const Detail= ({productId}:{productId:number}) =>{
                         <div className="w-full">
                             <div className="w-full  flex justify-center max-1280:hidden">
                                 <Magnifier
-                                    src={`/assets/images/products/${userSelected.category+((productId%16)+1)}.png`}
+                                    src={`/assets/images/products/${userSelected.category+((productId%16))}.png`}
                                     width={500}
                                     height={500}
                                     leftAbsolute={600}
@@ -143,7 +144,7 @@ const Detail= ({productId}:{productId:number}) =>{
                             </div>
                             <div className="w-full  hidden max-1280:flex justify-center max-1080:hidden">
                                 <Magnifier
-                                    src={`/assets/images/products/${userSelected.category+((productId%16)+1)}.png`}
+                                    src={`/assets/images/products/${userSelected.category+((productId%16))}.png`}
                                     width={500}
                                     height={500}
                                     leftAbsolute={500}
@@ -171,13 +172,13 @@ const Detail= ({productId}:{productId:number}) =>{
                 <div className="w-full flex justify-center">
                     <div className="flex gap-2">
                         <div className="w-20">
-                            <Image src={require(`../../../../../../public/assets/images/products/images_${(productId%16)+1}.png`)} alt="itemImage" />
+                            <Image src={require(`../../../../../../public/assets/images/products/images_${(productId%16)}.png`)} alt="itemImage" />
                         </div>
                         <div className="w-20">
-                            <Image src={require(`../../../../../../public/assets/images/products/images_${(productId%16)+1}.png`)} alt="itemImage" />
+                            <Image src={require(`../../../../../../public/assets/images/products/images_${(productId%16)}.png`)} alt="itemImage" />
                         </div>
                         <div className="w-20">
-                            <Image src={require(`../../../../../../public/assets/images/products/images_${(productId%16)+1}.png`)} alt="itemImage" />
+                            <Image src={require(`../../../../../../public/assets/images/products/images_${(productId%16)}.png`)} alt="itemImage" />
                         </div>
                     </div>
                 </div>
@@ -279,19 +280,19 @@ const Detail= ({productId}:{productId:number}) =>{
                             }}>
                                 <i className={`fa fa-heart ${fav.indexOf(userSelected.product_id)!=-1?'text-red-500':'text-black'}`}></i>
                             </div>
-                            <p className="text-lg  whitespace-nowrap max-786:text-base max-640:text-sm">{fav.indexOf(userSelected.product_id)!=-1?'Remove From Wishlist':'Add to Wishlist'}</p>
+                            <p className="text-lg  whitespace-nowrap max-1280:text-base max-640:text-sm ">{fav.indexOf(userSelected.product_id)!=-1?'Remove From Wishlist':'Add to Wishlist'}</p>
                         </div>
                         <div className="flex items-center gap-2">
-                            <div className="w-[50px] aspect-square flex justify-center items-center border border-[#E5E7EB] rounded-xl text-2xl max-786:text-xl max-640:text-lg max-640:w-[40px]">
+                            <div className="w-[50px] aspect-square flex justify-center items-center border border-[#E5E7EB] rounded-xl text-2xl max-786:text-xl max-640:text-lg max-640:w-[40px] ">
                                 <i className="fa fa-heart"></i>
                             </div>
-                            <p className="text-lg whitespace-nowrap max-786:text-base max-640:text-sm">Share This Product</p>
+                            <p className="text-lg whitespace-nowrap max-1280:text-base max-640:text-sm">Share This Product</p>
                         </div>
                         <div className="flex items-center gap-2">
-                            <div className="w-[50px] aspect-square flex justify-center items-center border border-[#E5E7EB] rounded-xl text-2xl  max-786:text-xl max-640:text-lg max-640:w-[40px]">
+                            <div className="w-[50px] aspect-square flex justify-center items-center border border-[#E5E7EB] rounded-xl text-2xl  max-786:text-xl max-640:text-lg max-640:w-[40px] ">
                                 <i className="fa fa-heart "></i>
                             </div>
-                            <p className="text-lg whitespace-nowrap max-786:text-base max-640:text-sm">Compare</p>
+                            <p className="text-lg whitespace-nowrap max-1280:text-base max-640:text-sm">Compare</p>
                         </div>
                     </div>
                 </div>

@@ -1,13 +1,16 @@
-'use client'
-
 import Header from "@/components/includes/header/header"
 import Footer from "@/components/includes/footer/footer"
 import Description from "./_components/Description"
 import Related from "./_components/Related"
 import Detail from "./_components/Details"
-import AllData from '../../../../../public/assets/json/addData.json'
 import React, { useEffect } from "react"
+import { Metadata } from "next"
 
+
+export const metadata: Metadata = {
+    title: 'Grogin | Product Page',
+    description: 'this is grogin site main page',
+  }
 
 const ProductDetailPage = ({params}:{params:{productId:any}}) =>{
 

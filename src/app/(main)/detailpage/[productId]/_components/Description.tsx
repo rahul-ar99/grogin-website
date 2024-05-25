@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image"
 import userImg from '../../../../../../public/assets/images/user.png'
 import { useEffect, useState } from "react"

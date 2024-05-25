@@ -253,7 +253,7 @@ const DetailPage= () =>{
                             <Link href={`detailpage/${value.product_id}`} className="cursor-default">
                                 <div className=" relative">
                                     <div className="max-h-[300px] min-h-[300px] max-1280:min-h-[200px]  overflow-hidden flex items-center">   
-                                        <Image className="max-h-[90%]" src={require(`../../../../public/assets/images/products/${(value.category +(value.product_id%16))}.png`)} alt="product" />
+                                        <Image className="max-h-[90%]" src={require(`../../../../public/assets/images/products/${(value.category +value.product_id%16)}.png`)} alt="product" />
                                     </div>
                                     <div>
                                         <div className="absolute top-3 right-3 z-40 cursor-pointer" onClick={(e)=>{
@@ -273,7 +273,7 @@ const DetailPage= () =>{
                                 <div className="pl-2">
                                     <h6 className="mb-3 max-[1080px]:text-sm h-10">{value.product_name}</h6>
                                     <div className="flex gap-2 items-center">
-                                        <div className="flex gap-1 max-[1080px]:text-xs max-1080:text-sm">
+                                        <div className="flex gap-1 max-[1080px]:text-xs max-1080:text-sm text-[#FACC15]">
                                             <i className={value.rating<=0?`fa fa-star-o`:'fa fa-star'}></i>
                                             <i className={value.rating<=1?`fa fa-star-o`:'fa fa-star'}></i>
                                             <i className={value.rating<=2?`fa fa-star-o`:'fa fa-star'}></i>
@@ -307,3 +307,4 @@ const DetailPage= () =>{
 }
 
 export default DetailPage
+

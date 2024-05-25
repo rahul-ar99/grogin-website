@@ -49,7 +49,7 @@ const Notification = ()=>{
         <div className="wrapper">
             <div className="w-full text-sm flex flex-wrap justify-around py-3 max-980:text-xs">
                 <p>FREE delivery & 40% Discount for next 3 orders! Place your 1st order in.</p>
-                <p>Until the and of the sale <span className="font-bold mx-2 text-base max-640:mx-0">{days}</span> days <span className="font-bold mx-2 text-base max-640:mx-0">{hours}</span> hours <span className="font-bold mx-2 text-base max-640:mx-0">{minutes}</span> minutes <span className="font-bold mx-2 text-base max-640:mx-0">
+                <p className="text-[#ffffffaf]">Until the and of the sale <span className="font-bold mx-2 text-base max-640:mx-0 text-[#ffffff]">{days}</span> days <span className="font-bold mx-2 text-base max-640:mx-0 text-[#ffffff]">{hours}</span> hours <span className="font-bold mx-2 text-base max-640:mx-0 text-[#ffffff]">{minutes}</span> minutes <span className="font-bold mx-2 text-base max-640:mx-0 text-[#ffffff]">
                    {seconds}</span> sec</p>
             </div>
         </div>

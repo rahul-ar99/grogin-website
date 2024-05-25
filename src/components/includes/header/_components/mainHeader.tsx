@@ -76,14 +76,6 @@ const MainHeader = () =>{
                             <p className="text-lg max-[980px]:text-sm max-1280:text-base max-640:text-sm  max-640:hidden">Your Cart</p>
                         </a>
                     </div>
-                    <div className="hidden max-640:flex">
-                        <a href=""  className="flex flex-col items-center">
-                        <div className="text-2xl max-[980px]:text-base max-1280:text-xl max-640:text-base">
-                            <i className="fa fa-bars"></i>
-                        </div>
-                        </a>
-                    </div>
-
                 </div>
             </div>
         </div>
