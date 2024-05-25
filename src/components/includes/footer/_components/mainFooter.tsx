@@ -91,16 +91,16 @@ const MainFooter = () =>{
                         <div>
                             <p>Follow on social media</p>
                             <div className="flex gap-4">
-                                <a href="" className="w-[50px] aspect-square bg-slate-300 flex justify-center items-center rounded-xl">
+                                <a href="https://www.facebook.com/" className="w-[50px] aspect-square bg-slate-300 flex justify-center items-center rounded-xl"  target="_blank">
                                     <Image className="w-[20px]" src={footerImage1} alt="facebook"/>
                                 </a>
-                                <a href="" className="w-[50px] aspect-square bg-slate-300 flex justify-center items-center rounded-xl">
+                                <a href="https://x.com/?lang=en" className="w-[50px] aspect-square bg-slate-300 flex justify-center items-center rounded-xl" target="_blank">
                                     <Image className="w-[20px]" src={footerImage2} alt="twitter"/>
                                 </a>
-                                <a href="" className="w-[50px] aspect-square bg-slate-300 flex justify-center items-center rounded-xl">
+                                <a href="https://www.instagram.com/" className="w-[50px] aspect-square bg-slate-300 flex justify-center items-center rounded-xl" target="_blank">
                                     <Image className="w-[20px]" src={footerImage3} alt="instagram"/>
                                 </a>
-                                <a href="" className="w-[50px] aspect-square bg-slate-300 flex justify-center items-center rounded-xl">
+                                <a href="https://www.linkedin.com/" className="w-[50px] aspect-square bg-slate-300 flex justify-center items-center rounded-xl" target="_blank">
                                     <Image className="w-[20px]" src={footerImage4} alt="linkedin"/>
                                 </a>
                             </div>
